@@ -1,5 +1,11 @@
 package com.edts.concert.entity;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.experimental.SuperBuilder;
+
 import javax.persistence.*;
 import java.time.LocalDateTime;
 
@@ -11,6 +17,11 @@ import java.time.LocalDateTime;
                 @UniqueConstraint(name = "uq_booking_slot_user", columnNames = {"slot_id", "user_id"})
         }
 )
+@Getter
+@Setter
+@SuperBuilder
+@NoArgsConstructor
+@AllArgsConstructor
 public class Booking {
 
     @Id
@@ -18,7 +29,7 @@ public class Booking {
     private Long id;
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "slot_id", nullable = false)
-    private TicketSlots slot;
+    private TicketSlot slot;
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id", nullable = false)
     private User user;

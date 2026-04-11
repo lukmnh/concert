@@ -42,19 +42,15 @@ CREATE TABLE bookings (
 CREATE INDEX idx_bookings_user_id ON bookings (user_id);
 CREATE INDEX idx_bookings_slot_user ON bookings (slot_id, user_id);
 
-
-
 INSERT INTO users (name, email) VALUES
-    ('Alice',   'alice@example.com'),
-    ('Bob',     'bob@example.com'),
-    ('Charlie', 'charlie@example.com');
+                                    ('gee',   'gee@gmail.com'),
+                                    ('bee',     'bee@gmail.com'),
+                                    ('cee', 'cee@gmail.com');
 
 INSERT INTO concerts (name, venue, description) VALUES
-    ('Coldplay World Tour',   'GBK Stadium, Jakarta',  'Music of the Spheres World Tour'),
-    ('Dewa 19 Reunion',       'ICE BSD, Tangerang',    'Konser reuni legendaris Dewa 19'),
-    ('Java Jazz Festival',    'JIExpo Kemayoran',      'Annual international jazz festival');
+                                                    ('Coldplay',   'GBK Stadium, Jakarta',  'Coldplay World Tour'),
+                                                    ('Dewa 19',       'ICE BSD, Tangerang',    'Dewa 19 Reunion')
 
 INSERT INTO ticket_slots (concert_id, sale_start, sale_end, total_tickets, remaining_tickets) VALUES
-    (1, NOW() + INTERVAL '1 day' + TIME '10:00:00', NOW() + INTERVAL '1 day' + TIME '10:20:00', 10000, 10000),
-    (2, NOW() + INTERVAL '2 day' + TIME '09:00:00', NOW() + INTERVAL '2 day' + TIME '09:30:00', 5000,  5000),
-    (3, NOW() + INTERVAL '3 day' + TIME '08:00:00', NOW() + INTERVAL '3 day' + TIME '09:00:00', 3000,  3000);
+(1, NOW() + INTERVAL '1 day' + TIME '10:00:00', NOW() + INTERVAL '1 day' + TIME '10:20:00', 10000, 10000),
+(2, NOW() + INTERVAL '2 day' + TIME '09:00:00', NOW() + INTERVAL '2 day' + TIME '09:30:00', 5000,  5000);

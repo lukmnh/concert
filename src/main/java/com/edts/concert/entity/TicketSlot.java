@@ -1,13 +1,23 @@
 package com.edts.concert.entity;
 
 import com.edts.concert.exception.SoldOutException;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.experimental.SuperBuilder;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "ticket_slots")
-public class TicketSlots {
+@Getter
+@Setter
+@SuperBuilder
+@NoArgsConstructor
+@AllArgsConstructor
+public class TicketSlot {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

@@ -1,0 +1,146 @@
+{
+  "info": {
+    "_postman_id": "97ba1421-0b02-4807-bf52-1857d4e3e19e",
+    "name": "Concert Ticket",
+    "description": "Postman collection based on actual controller implementation",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Create Concert",
+      "id": "0ba94c1b-454c-43f2-8e8a-3ac41914d382",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Coldplay\",\n  \"venue\": \"GBK Stadium\",\n  \"description\": \"Coldplay World Tour\",\n  \"ticketSlots\": [\n    {\n      \"saleStart\": \"2026-04-12T20:36:14\",\n      \"saleEnd\": \"2026-04-12T20:56:14\",\n      \"totalTickets\": 10000\n    }\n  ]\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/concerts",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "concerts"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Concert by ID",
+      "id": "79ce3275-5f67-431a-a7d3-fcabea9ad0f7",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/concerts/1",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "concerts",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Search Concert",
+      "id": "e04e2258-7f6c-4cdd-9471-a74cc6e4d8d1",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/concerts?name=Coldplay&venue=GBK",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "concerts"
+          ],
+          "query": [
+            {
+              "key": "name",
+              "value": "Coldplay"
+            },
+            {
+              "key": "venue",
+              "value": "GBK"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Book Ticket",
+      "id": "984f9494-b9e9-4ee8-a1b1-3e0d23265464",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"slotId\": 1,\n  \"userId\": 1,\n  \"quantity\": 2\n}"
+        },
+        "url": {
+          "raw": "http://localhost:9090/v1/api/booking",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "9090",
+          "path": [
+            "v1",
+            "api",
+            "booking"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Bookings by User",
+      "id": "013cfc09-c96c-450d-a458-70563c72cb81",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:9090/v1/api/booking/user/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "9090",
+          "path": [
+            "v1",
+            "api",
+            "booking",
+            "user",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    }
+  ],
+  "variable": [
+    {
+      "id": "3f150a08-eb27-4495-97fe-53bd10356304",
+      "key": "base_url",
+      "value": "http://localhost:9090/v1/api"
+    }
+  ]
+}
