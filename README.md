@@ -1,6 +1,4 @@
-# 🎟️ Concert Ticket Booking System
-
-## 📌 Overview
+# Concert Ticket Booking System
 
 This project is a **Ticket booking system** that allows users to:
 
@@ -10,7 +8,7 @@ This project is a **Ticket booking system** that allows users to:
 
 ---
 
-# 🔄 End-to-End Flow
+# End-to-End Flow
 
 ## 1. Create Concert
 
@@ -50,16 +48,15 @@ sale_start <= NOW() <= sale_end
 
 1. User request booking
 2. Validate:
-
     * time window
-    * ticket availability
-3. Atomic update ticket
+    * ticket availability 
+3. Update ticket
 4. Insert booking
 5. Commit transaction
 
 ---
 
-# 🗄️ Database Design
+#  Database Design
 
 ## ERD
 
@@ -84,7 +81,7 @@ The database is designed to ensure performance, scalability, and data consistenc
 * version → enables optimistic locking to prevent overselling during concurrent booking
 * bookings stores user transactions with unique (slot_id, user_id) to prevent duplicate bookings per user
 
-# 📡 API Documentation
+# API Documentation
 
 Base URL:
 
