@@ -1,0 +1,107 @@
+{
+  "info": {
+    "_postman_id": "813090be-ecbf-42c0-9792-1abbcef9a5b2",
+    "name": "warehouse pet food",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "create items",
+      "id": "9f561694-3e8b-41fe-bc98-f759f56f50cc",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"name\": \"Whiskas Chciken 50gr\",\r\n  \"description\": \"Chciken flavor wet food\",\r\n  \"categoryId\": \"80a141c9-e2ff-418b-9a11-94420daa93d4\",\r\n  \"brandId\": \"8c625177-7b14-4b52-aa29-f3c2cdf3b10d\",\r\n  \"price\": 50000,\r\n  \"initialStock\": 50,\r\n  \"warehouseZone\": \"A\",\r\n  \"rackNumber\": \"01\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:9090/v1/api/items",
+          "host": [
+            "localhost"
+          ],
+          "port": "9090",
+          "path": [
+            "v1",
+            "api",
+            "items"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "update items",
+      "id": "36e7ddfb-dc66-47e5-af16-7aa4245627d6",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"name\": \"Whiskas Chciken 50gr\",\r\n  \"description\": \"Chciken flavor wet food\",\r\n  \"categoryId\": \"80a141c9-e2ff-418b-9a11-94420daa93d4\",\r\n  \"brandId\": \"8c625177-7b14-4b52-aa29-f3c2cdf3b10d\",\r\n  \"price\": 40000,\r\n  \"initialStock\": 50,\r\n  \"stockChange\": 45,\r\n  \"warehouseZone\": \"A\",\r\n  \"rackNumber\": \"01\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:9090/v1/api/items/05ecc4a1-44a8-496e-975b-b23a8672bfb6",
+          "host": [
+            "localhost"
+          ],
+          "port": "9090",
+          "path": [
+            "v1",
+            "api",
+            "items",
+            "05ecc4a1-44a8-496e-975b-b23a8672bfb6"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "create variant",
+      "id": "3f1150d5-0ef6-48d3-8811-f2ce18426d5b",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n   \"variantName\": \"UKURAN\",\r\n    \"variantValue\": \"400GR\",\r\n    \"price\": 45000,\r\n    \"initialStock\": 50,\r\n    \"warehouseZone\": \"A\",\r\n    \"rackNumber\": \"06\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:9090/v1/api/variant/05ecc4a1-44a8-496e-975b-b23a8672bfb6",
+          "host": [
+            "localhost"
+          ],
+          "port": "9090",
+          "path": [
+            "v1",
+            "api",
+            "variant",
+            "05ecc4a1-44a8-496e-975b-b23a8672bfb6"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}

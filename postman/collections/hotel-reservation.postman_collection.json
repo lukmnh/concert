@@ -1,0 +1,66 @@
+{
+  "info": {
+    "_postman_id": "c69894e2-d48c-4813-9b6e-ac3c5840240b",
+    "name": "hotel-reservation",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "room",
+      "item": [
+        {
+          "name": "new-room",
+          "id": "55e5db74-2d90-4edc-82af-da76eb8da3a9",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "photo",
+                  "type": "file",
+                  "src": "/C:/Users/acer/Pictures/kursi prioritas.jpeg"
+                },
+                {
+                  "key": "roomType",
+                  "value": "Single bed",
+                  "type": "text"
+                },
+                {
+                  "key": "roomPrice",
+                  "value": "200000",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://localhost:9100/room/add/new-room",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9100",
+              "path": [
+                "room",
+                "add",
+                "new-room"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "New Request",
+          "id": "dcf8338a-dab7-4cfa-b3ea-85fb31735807",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        }
+      ],
+      "id": "e9c7bcbf-c6b7-4c10-85d2-f2f86923c528"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "info": {
+    "_postman_id": "98708a62-8409-473b-bf6c-b9c599fa3862",
+    "name": "MCS",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "http://localhost:9010/getSlik",
+      "id": "116b71ef-0c29-44ef-bd7f-71a4b4aff0a4",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"detail\": {\r\n        \"debitur\": {\r\n            \"personal\": {\r\n                \"email\": \"\",\r\n                \"no_ktp\": \"1771040406010002\",\r\n                \"no_hp_1\": \"082178907840\",\r\n                \"no_hp_2\": \"\",\r\n                \"foto_ktp\": \"\",\r\n                \"tempat_lahir\": \"PEMATANG GUBERNUR \",\r\n                \"jenis_kelamin\": \"L\",\r\n                \"tanggal_lahir\": \"04-JUN-2001\",\r\n                \"alamat_debitur\": {\r\n                    \"alamat_ktp\": {\r\n                        \"rt\": \"000\",\r\n                        \"rw\": \"000\",\r\n                        \"alamat\": \"JL PENANTIAN\",\r\n                        \"kode_pos\": \"38125\",\r\n                        \"desc_kab_kot\": \"KOTA BENGKULU\",\r\n                        \"kode_kab_kot\": \"2351\",\r\n                        \"desc_provinsi\": \"PROVINSI BENGKULU\",\r\n                        \"kode_provinsi\": \"23\",\r\n                        \"desc_kecamatan\": \"MUARA BANGKA HULU\",\r\n                        \"desc_kelurahan\": \"PEMATANG GUBERNUR\",\r\n                        \"kode_kecamatan\": \"12701\",\r\n                        \"kode_kelurahan\": \"20384\"\r\n                    }\r\n                },\r\n                \"area_branch_id\": \"0010\",\r\n                \"area_branch_desc\": \"AREA SUMBAGSEL\",\r\n                \"status_perkawinan\": \"01\",\r\n                \"status_perkawinan_desc\": \"KAWIN\"\r\n            }\r\n        },\r\n        \"identitas_order\": {\r\n            \"internal_sales_force\": [\r\n                {\r\n                    \"internal_sales_hp_no\": \"085609258325\",\r\n                    \"internal_sales_com_br\": \"0615\",\r\n                    \"internal_sales_head_id\": \"23023182\",\r\n                    \"internal_sales_head_no\": \"2300010737\",\r\n                    \"internal_sales_com_code\": \"MUF\",\r\n                    \"internal_sales_force_id\": \"24027244\",\r\n                    \"internal_sales_force_no\": \"2400005930\",\r\n                    \"internal_sales_head_npk\": \"0002\",\r\n                    \"internal_sales_job_code\": \"CMO\",\r\n                    \"internal_sales_job_desc\": \"CREDIT MARKETING OFFICER\",\r\n                    \"internal_sales_bank_code\": \"\",\r\n                    \"internal_sales_force_npk\": \"004X\",\r\n                    \"internal_sales_head_name\": \"AGTO FERONOWALDO\",\r\n                    \"internal_sales_type_code\": \"1\",\r\n                    \"internal_sales_type_desc\": \"INTERNAL SALES 1\",\r\n                    \"internal_sales_force_desc\": \"ANDRI  SAPRIANDA\",\r\n                    \"internal_sales_bank_acc_no\": \"\",\r\n                    \"internal_sales_head_job_code\": \"CMH\",\r\n                    \"internal_sales_head_job_desc\": \"CREDIT MARKETING HEAD\"\r\n                }\r\n            ]\r\n        },\r\n        \"object_pembiayaan\": {\r\n            \"tenor\": 0.0,\r\n            \"max_loan\": \"0\",\r\n            \"obj_code\": \"001\",\r\n            \"obj_desc\": \"MOTOR BARU\",\r\n            \"obj_fuel\": \"\",\r\n            \"obj_year\": \"\",\r\n            \"obj_price\": 0.0,\r\n            \"obj_wheel\": \"\",\r\n            \"type_code\": \"\",\r\n            \"type_desc\": \"\",\r\n            \"brand_code\": \"\",\r\n            \"brand_desc\": \"\",\r\n            \"model_code\": \"\",\r\n            \"model_desc\": \"\",\r\n            \"down_payment\": 0.0,\r\n            \"eng_capacity\": \"\",\r\n            \"obj_made_code\": \"\",\r\n            \"obj_made_desc\": \"\",\r\n            \"sub_type_code\": \"\",\r\n            \"sub_type_desc\": \"\",\r\n            \"obj_group_code\": \"001\",\r\n            \"obj_group_desc\": \"MOTOR\",\r\n            \"disburse_amount\": 0.0,\r\n            \"type_genre_code\": \"\",\r\n            \"type_genre_desc\": \"\",\r\n            \"obj_market_price\": 0.0,\r\n            \"installment_amount\": 0.0,\r\n            \"obj_insr_group_code\": \"\",\r\n            \"obj_insr_group_desc\": \"\",\r\n            \"obj_model_group_code\": \"\",\r\n            \"obj_model_group_desc\": \"\",\r\n            \"total_installment_amount\": 0.0\r\n        },\r\n        \"status_entry_form_manual\": {\r\n            \"insert_by\": \"24027244\",\r\n            \"insert_date\": \"2024/10/30 14:31:22\"\r\n        }\r\n    },\r\n    \"order_id\": \"2410112079\",\r\n    \"pk_payung\": \"\",\r\n    \"prioritas\": 1,\r\n    \"appl_va_no\": [],\r\n    \"order_mode\": \"00\",\r\n    \"promo_code\": \"\",\r\n    \"branch_code\": \"0615\",\r\n    \"branch_desc\": \"BENGKULU\",\r\n    \"contract_id\": [],\r\n    \"screening_1\": \"NON IND IA-NORESPON\",\r\n    \"screening_2\": \"\",\r\n    \"screening_3\": \"\",\r\n    \"channel_code\": \"01\",\r\n    \"channel_desc\": \"DEALER/SHOWROOM\",\r\n    \"grading_slik\": \"NO RESPONSE\",\r\n    \"customer_name\": \"ANGGA MARWANSYAH\",\r\n    \"flag_trade_in\": \"N\",\r\n    \"application_id\": \"\",\r\n    \"flag_marketing\": \"Y\",\r\n    \"flag_order_type\": \"ND\",\r\n    \"application_date\": \"\",\r\n    \"flag_data_format\": \"\",\r\n    \"grading_employee\": \"GREEN\",\r\n    \"insurance_com_id\": \"\",\r\n    \"mkt_program_code\": \"\",\r\n    \"mkt_program_desc\": \"\",\r\n    \"order_created_by\": \"24027244\",\r\n    \"scoring_dukcapil\": \"93\",\r\n    \"screening_1_date\": \"2024/10/30 14:31:27\",\r\n    \"screening_2_date\": \"\",\r\n    \"screening_3_date\": \"\",\r\n    \"source_form_code\": \"EFMAL\",\r\n    \"source_form_desc\": \"ENTRY FORM MANUAL\",\r\n    \"current_form_code\": \"EFMAL\",\r\n    \"current_form_desc\": \"ENTRY FORM MANUAL\",\r\n    \"purchase_order_id\": \"\",\r\n    \"source_order_code\": \"02\",\r\n    \"source_order_desc\": \"MUFSURVEY\",\r\n    \"customer_behaviour\": \"NEW CUSTOMER\",\r\n    \"customer_type_code\": \"03\",\r\n    \"customer_type_desc\": \"Tidak\",\r\n    \"financing_obj_code\": \"FO01\",\r\n    \"financing_obj_desc\": \"KENDARAAN\",\r\n    \"insurance_com_desc\": \"\",\r\n    \"order_created_date\": \"2024/10/30 14:31:22\",\r\n    \"status_assign_code\": \"03\",\r\n    \"status_assign_desc\": \"ENTRY MANUAL\",\r\n    \"applicant_type_code\": \"PER\",\r\n    \"applicant_type_desc\": \"PERSONAL\",\r\n    \"kelengkapan_dokumen\": \"-\",\r\n    \"outlet_channel_code\": \"00P476\",\r\n    \"outlet_channel_desc\": \"PT THAMRIN BROTHERS-NATADIRJA\",\r\n    \"grading_dealer_mitra\": \"GOLD 2\",\r\n    \"confirmation_letter_id\": \"\",\r\n    \"grading_customer_category\": \"NEW\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:9011/getPerusahaanAsuransi",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "9011",
+          "path": [
+            "getPerusahaanAsuransi"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}

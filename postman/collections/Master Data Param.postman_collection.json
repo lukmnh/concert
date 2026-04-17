@@ -1,0 +1,457 @@
+{
+  "info": {
+    "_postman_id": "377fcba0-0de3-4a5c-a90a-04d620196762",
+    "name": "Master Data Param",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Master Data Login",
+      "item": [
+        {
+          "name": "getApprovalRoleJob",
+          "id": "1b5f5841-c79a-42a0-aaa3-6f393eca7039",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"role\": [\r\n        {\r\n            \"role_code\": \"APPR_CRED_RETAIL_L1\"\r\n        }\r\n    ],\r\n    \"job\": [\r\n        {\r\n            \"job_code\": \"121\"\r\n        }\r\n    ]\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://master-param-approval-uat.apps.ocp4dev.muf.co.id/getApprovalRoleJob",
+              "protocol": "http",
+              "host": [
+                "master-param-approval-uat",
+                "apps",
+                "ocp4dev",
+                "muf",
+                "co",
+                "id"
+              ],
+              "path": [
+                "getApprovalRoleJob"
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "20927549-63e9-4c40-87b7-4a62ddedb149",
+              "name": "getApprovalRoleJob",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"role\": [\r\n        {\r\n            \"role_code\": \"APPR_CRED_RETAIL_L1\"\r\n        }\r\n    ],\r\n    \"job\": [\r\n        {\r\n            \"job_code\": \"121\"\r\n        }\r\n    ]\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://master-param-approval-uat.apps.ocp4dev.muf.co.id/getApprovalRoleJob",
+                  "protocol": "http",
+                  "host": [
+                    "master-param-approval-uat",
+                    "apps",
+                    "ocp4dev",
+                    "muf",
+                    "co",
+                    "id"
+                  ],
+                  "path": [
+                    "getApprovalRoleJob"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "vary",
+                  "value": "Access-Control-Request-Method"
+                },
+                {
+                  "key": "vary",
+                  "value": "Access-Control-Request-Headers"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "transfer-encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "date",
+                  "value": "Fri, 14 Jun 2024 03:14:03 GMT"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"data\": [\n        {\n            \"role_code\": \"APPR_CRED_RETAIL_L1\",\n            \"role_desc\": \"APPROVAL LEVEL 1\",\n            \"level\": 1,\n            \"application_type\": \"RETAIL\",\n            \"job_code\": \"121\",\n            \"job_desc\": \"CREDIT ANALYST\"\n        }\n    ],\n    \"status\": true\n}"
+            }
+          ]
+        },
+        {
+          "name": "Login",
+          "id": "2574df47-f659-4520-afd6-6f5ba4d6be8e",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"username\" : \"18009070\",\r\n    \"password\" : \"Muf_2017\",\r\n    \"app\": \"SKTN\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://api-massuat-pub.muf.co.id/mass-api/authentication/uaa-iam/user/auth/login",
+              "protocol": "https",
+              "host": [
+                "api-massuat-pub",
+                "muf",
+                "co",
+                "id"
+              ],
+              "path": [
+                "mass-api",
+                "authentication",
+                "uaa-iam",
+                "user",
+                "auth",
+                "login"
+              ]
+            }
+          },
+          "response": []
+        }
+      ],
+      "id": "b48edd7a-0f4a-4d8d-a7c4-59f96ae1fe65"
+    },
+    {
+      "name": "Master Data Dealer",
+      "item": [
+        {
+          "name": "getParamSupplier",
+          "id": "56744ce5-627d-4da4-baa3-232ccbf2f88d",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"supplier_code\":\"00A115\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://master-acq-param-java-uat.apps.ocp4dev.muf.co.id/getParamSupplier",
+              "protocol": "http",
+              "host": [
+                "master-acq-param-java-uat",
+                "apps",
+                "ocp4dev",
+                "muf",
+                "co",
+                "id"
+              ],
+              "path": [
+                "getParamSupplier"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "checkOutletChannel",
+          "id": "328cd306-83b0-424f-aa46-525ade14c17d",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"dealer_code\":\"00A115\",\r\n    \"dealer_name\":\"HONDA MITRA JATIASIH\",\r\n    \"obj_code\":\"003\",\r\n    \"obj_desc\":\"Mobil Baru\",\r\n    \"obj_brand_code\":\"00T\",\r\n    \"obj_brand_desc\":\"HONDA\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://master-acq-param-java-uat.apps.ocp4dev.muf.co.id/checkOutletChannel",
+              "protocol": "http",
+              "host": [
+                "master-acq-param-java-uat",
+                "apps",
+                "ocp4dev",
+                "muf",
+                "co",
+                "id"
+              ],
+              "path": [
+                "checkOutletChannel"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getBankInformation",
+          "id": "2de6a6bb-9131-4be2-ac7f-6a3e001a1718",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"dealer_code\": \"00A516\",\r\n    \"branch_code\": \"0107\",\r\n    \"paket_rekening_id\": \"9171\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://master-acq-param-java-uat.apps.ocp4dev.muf.co.id/getBankInformation",
+              "protocol": "http",
+              "host": [
+                "master-acq-param-java-uat",
+                "apps",
+                "ocp4dev",
+                "muf",
+                "co",
+                "id"
+              ],
+              "path": [
+                "getBankInformation"
+              ]
+            }
+          },
+          "response": []
+        }
+      ],
+      "id": "4af41792-1d25-4362-8ca5-e88c0bf9e87e"
+    },
+    {
+      "name": "Master Data Object",
+      "item": [
+        {
+          "name": "getAllObject",
+          "id": "1de32fe5-f165-4cc6-9a51-d9d4e64f1793",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://master-acq-param-java-dev.apps.ocp4dev.muf.co.id/getAllObject",
+              "protocol": "http",
+              "host": [
+                "master-acq-param-java-dev",
+                "apps",
+                "ocp4dev",
+                "muf",
+                "co",
+                "id"
+              ],
+              "path": [
+                "getAllObject"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getObjectColor",
+          "id": "e2fd2e97-7dae-415b-8288-077f40b2ac75",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://master-acq-param-java-dev.apps.ocp4dev.muf.co.id/getObjectColor",
+              "protocol": "http",
+              "host": [
+                "master-acq-param-java-dev",
+                "apps",
+                "ocp4dev",
+                "muf",
+                "co",
+                "id"
+              ],
+              "path": [
+                "getObjectColor"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getTypeGenre",
+          "id": "d0f0505d-6ec8-4832-a668-b136d791fda1",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"object_code\":\"001\",\r\n    \"object_type\":\"097\",\r\n    \"cust_type\":\"COM\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://master-acq-param-java-dev.apps.ocp4dev.muf.co.id/getTypeGenre",
+              "protocol": "http",
+              "host": [
+                "master-acq-param-java-dev",
+                "apps",
+                "ocp4dev",
+                "muf",
+                "co",
+                "id"
+              ],
+              "path": [
+                "getTypeGenre"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getObjectById/{orderId}",
+          "id": "38316dac-4fcb-41bf-9424-9e7fff0f996d",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": ""
+            }
+          },
+          "response": []
+        }
+      ],
+      "id": "352f6e7b-300e-4c4f-a1ff-a36e1d91211d"
+    },
+    {
+      "name": "Master Data Model",
+      "item": [
+        {
+          "name": "getAllModelByBrand",
+          "id": "a683ab94-ef46-4e93-9f22-669d53f25c4d",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"obj_brand_desc\": \"YAMAHA\",\r\n    \"obj_code\": \"002\",\r\n    \"cust_type\": \"PER\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://master-model-by-brand-java-uat.apps.ocp4dev.muf.co.id/getAllModelByBrand",
+              "protocol": "http",
+              "host": [
+                "master-model-by-brand-java-uat",
+                "apps",
+                "ocp4dev",
+                "muf",
+                "co",
+                "id"
+              ],
+              "path": [
+                "getAllModelByBrand"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getObjectModel",
+          "id": "25471fa2-cde9-4cb9-9059-26ad6d6e1bac",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"obj_model\": \"0AQ\",\r\n    \"obj_code\": \"003\",\r\n    \"cust_type\": \"PER\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://master-model-by-brand-java-uat.apps.ocp4dev.muf.co.id/getObjectModel",
+              "protocol": "http",
+              "host": [
+                "master-model-by-brand-java-uat",
+                "apps",
+                "ocp4dev",
+                "muf",
+                "co",
+                "id"
+              ],
+              "path": [
+                "getObjectModel"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getAllModelByBrandSupply",
+          "id": "6e58af2f-8e5f-43e6-aeba-e6bc2b6c20e8",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"obj_brand_desc\": \"HONDA\",\r\n    \"dealer_code\": \"00C658\",\r\n    \"obj_code\": \"003\",\r\n    \"cust_type\": \"PER\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://master-model-by-brand-java-uat.apps.ocp4dev.muf.co.id/getAllModelByBrandSupply",
+              "protocol": "http",
+              "host": [
+                "master-model-by-brand-java-uat",
+                "apps",
+                "ocp4dev",
+                "muf",
+                "co",
+                "id"
+              ],
+              "path": [
+                "getAllModelByBrandSupply"
+              ]
+            }
+          },
+          "response": []
+        }
+      ],
+      "id": "6b1c566f-b766-4f35-9955-fa14453a643a"
+    }
+  ]
+}

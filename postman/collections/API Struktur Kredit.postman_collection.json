@@ -1,0 +1,306 @@
+{
+  "info": {
+    "_postman_id": "3dd18ddb-2389-49af-8cbf-141bad9b4000",
+    "name": "API Struktur Kredit",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Get Effective Rate ",
+      "id": "cb846468-3669-4959-a6c8-f726b226ab83",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"tenor\": 24,\r\n    \"installment_amount\": 7338700,\r\n    \"installment_type\": \"02\",\r\n    \"flat_rate\": 12,\r\n    \"total_principal_amount\": 142815000\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://calculate-structure-credit-java-dev.apps.ocp4dev.muf.co.id/getEffRate",
+          "protocol": "http",
+          "host": [
+            "calculate-structure-credit-java-dev",
+            "apps",
+            "ocp4dev",
+            "muf",
+            "co",
+            "id"
+          ],
+          "path": [
+            "getEffRate"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Fiducia",
+      "id": "2eaf3d9c-6cd7-4d7a-a452-ae7689ad3f8d",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"total_amount\": 176127399\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://calculate-structure-credit-java-dev.apps.ocp4dev.muf.co.id/getFiducia",
+          "protocol": "http",
+          "host": [
+            "calculate-structure-credit-java-dev",
+            "apps",
+            "ocp4dev",
+            "muf",
+            "co",
+            "id"
+          ],
+          "path": [
+            "getFiducia"
+          ]
+        }
+      },
+      "response": [
+        {
+          "id": "7f57986e-7bca-44e8-97de-19917465b642",
+          "name": "Get Fiducia",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"total_amount\": 176127399\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://calculate-structure-credit-java-dev.apps.ocp4dev.muf.co.id/getFiducia",
+              "protocol": "http",
+              "host": [
+                "calculate-structure-credit-java-dev",
+                "apps",
+                "ocp4dev",
+                "muf",
+                "co",
+                "id"
+              ],
+              "path": [
+                "getFiducia"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "vary",
+              "value": "Origin"
+            },
+            {
+              "key": "vary",
+              "value": "Access-Control-Request-Method"
+            },
+            {
+              "key": "vary",
+              "value": "Access-Control-Request-Headers"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json"
+            },
+            {
+              "key": "transfer-encoding",
+              "value": "chunked"
+            },
+            {
+              "key": "date",
+              "value": "Wed, 12 Jun 2024 09:59:27 GMT"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"data\": {\n        \"fiducia_credit\": 265000\n    },\n    \"success\": true\n}"
+        }
+      ]
+    },
+    {
+      "name": "Service calculate",
+      "id": "413af536-31d2-40e2-b6d5-178016eca31e",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"tipe\": \"ARR\",\r\n    \"otr\": 142815000,\r\n    \"eff_rate\": \"21\",\r\n    \"flat_rate\": \"11.66278\",\r\n    \"installment_amount\": 0,\r\n    \"obj_group_code\": \"002\",\r\n    \"tenor\": 24,\r\n    \"periode\": 1\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://calculate-structure-credit-java-dev.apps.ocp4dev.muf.co.id/getAnuitas",
+          "protocol": "http",
+          "host": [
+            "calculate-structure-credit-java-dev",
+            "apps",
+            "ocp4dev",
+            "muf",
+            "co",
+            "id"
+          ],
+          "path": [
+            "getAnuitas"
+          ]
+        }
+      },
+      "response": [
+        {
+          "id": "542fcc7b-ff5c-4fc2-a384-f60dc1882165",
+          "name": "Service calculate",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"tipe\": \"ARR\",\r\n    \"otr\": 142815000,\r\n    \"eff_rate\": \"21\",\r\n    \"flat_rate\": \"11.66278\",\r\n    \"installment_amount\": 0,\r\n    \"obj_group_code\": \"002\",\r\n    \"tenor\": 24,\r\n    \"periode\": 1\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://calculate-structure-credit-java-dev.apps.ocp4dev.muf.co.id/getAnuitas",
+              "protocol": "http",
+              "host": [
+                "calculate-structure-credit-java-dev",
+                "apps",
+                "ocp4dev",
+                "muf",
+                "co",
+                "id"
+              ],
+              "path": [
+                "getAnuitas"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "vary",
+              "value": "Origin"
+            },
+            {
+              "key": "vary",
+              "value": "Access-Control-Request-Method"
+            },
+            {
+              "key": "vary",
+              "value": "Access-Control-Request-Headers"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json"
+            },
+            {
+              "key": "transfer-encoding",
+              "value": "chunked"
+            },
+            {
+              "key": "date",
+              "value": "Wed, 12 Jun 2024 09:56:48 GMT"
+            },
+            {
+              "key": "set-cookie",
+              "value": "0ace904669d03e8247c226bd84eb6842=60e30e266b1b6b0f340cb11c7f1d430c; path=/; HttpOnly"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"data\": {\n        \"flate_rate\": 11.66278,\n        \"eff_rate\": 21,\n        \"pokok_hutang\": 142815000,\n        \"angsuran\": 7338700,\n        \"total_bunga\": 33312399,\n        \"tipe_perhitungan_kredit\": \"ARR\",\n        \"total_angs_bunga\": 33312399,\n        \"total_angs_pokok\": 176127399,\n        \"amortisasi\": [\n            {\n                \"installment\": 1,\n                \"outstanding\": 142815000,\n                \"principle\": 4839437,\n                \"interest\": 2499263,\n                \"total\": 7338700,\n                \"outstanding_interest\": 0\n            },\n            {\n                \"installment\": 2,\n                \"outstanding\": 137975563,\n                \"principle\": 4924128,\n                \"interest\": 2414572,\n                \"total\": 7338700,\n                \"outstanding_interest\": 0\n            },\n            {\n                \"installment\": 3,\n                \"outstanding\": 133051435,\n                \"principle\": 5010300,\n                \"interest\": 2328400,\n                \"total\": 7338700,\n                \"outstanding_interest\": 0\n            },\n            {\n                \"installment\": 4,\n                \"outstanding\": 128041135,\n                \"principle\": 5097980,\n                \"interest\": 2240720,\n                \"total\": 7338700,\n                \"outstanding_interest\": 0\n            },\n            {\n                \"installment\": 5,\n                \"outstanding\": 122943155,\n                \"principle\": 5187195,\n                \"interest\": 2151505,\n                \"total\": 7338700,\n                \"outstanding_interest\": 0\n            },\n            {\n                \"installment\": 6,\n                \"outstanding\": 117755960,\n                \"principle\": 5277971,\n                \"interest\": 2060729,\n                \"total\": 7338700,\n                \"outstanding_interest\": 0\n            },\n            {\n                \"installment\": 7,\n                \"outstanding\": 112477989,\n                \"principle\": 5370335,\n                \"interest\": 1968365,\n                \"total\": 7338700,\n                \"outstanding_interest\": 0\n            },\n            {\n                \"installment\": 8,\n                \"outstanding\": 107107654,\n                \"principle\": 5464316,\n                \"interest\": 1874384,\n                \"total\": 7338700,\n                \"outstanding_interest\": 0\n            },\n            {\n                \"installment\": 9,\n                \"outstanding\": 101643338,\n                \"principle\": 5559942,\n                \"interest\": 1778758,\n                \"total\": 7338700,\n                \"outstanding_interest\": 0\n            },\n            {\n                \"installment\": 10,\n                \"outstanding\": 96083396,\n                \"principle\": 5657241,\n                \"interest\": 1681459,\n                \"total\": 7338700,\n                \"outstanding_interest\": 0\n            },\n            {\n                \"installment\": 11,\n                \"outstanding\": 90426155,\n                \"principle\": 5756242,\n                \"interest\": 1582458,\n                \"total\": 7338700,\n                \"outstanding_interest\": 0\n            },\n            {\n                \"installment\": 12,\n                \"outstanding\": 84669913,\n                \"principle\": 5856977,\n                \"interest\": 1481723,\n                \"total\": 7338700,\n                \"outstanding_interest\": 0\n            },\n            {\n                \"installment\": 13,\n                \"outstanding\": 78812936,\n                \"principle\": 5959474,\n                \"interest\": 1379226,\n                \"total\": 7338700,\n                \"outstanding_interest\": 0\n            },\n            {\n                \"installment\": 14,\n                \"outstanding\": 72853462,\n                \"principle\": 6063764,\n                \"interest\": 1274936,\n                \"total\": 7338700,\n                \"outstanding_interest\": 0\n            },\n            {\n                \"installment\": 15,\n                \"outstanding\": 66789698,\n                \"principle\": 6169880,\n                \"interest\": 1168820,\n                \"total\": 7338700,\n                \"outstanding_interest\": 0\n            },\n            {\n                \"installment\": 16,\n                \"outstanding\": 60619818,\n                \"principle\": 6277853,\n                \"interest\": 1060847,\n                \"total\": 7338700,\n                \"outstanding_interest\": 0\n            },\n            {\n                \"installment\": 17,\n                \"outstanding\": 54341965,\n                \"principle\": 6387716,\n                \"interest\": 950984,\n                \"total\": 7338700,\n                \"outstanding_interest\": 0\n            },\n            {\n                \"installment\": 18,\n                \"outstanding\": 47954249,\n                \"principle\": 6499501,\n                \"interest\": 839199,\n                \"total\": 7338700,\n                \"outstanding_interest\": 0\n            },\n            {\n                \"installment\": 19,\n                \"outstanding\": 41454748,\n                \"principle\": 6613242,\n                \"interest\": 725458,\n                \"total\": 7338700,\n                \"outstanding_interest\": 0\n            },\n            {\n                \"installment\": 20,\n                \"outstanding\": 34841506,\n                \"principle\": 6728974,\n                \"interest\": 609726,\n                \"total\": 7338700,\n                \"outstanding_interest\": 0\n            },\n            {\n                \"installment\": 21,\n                \"outstanding\": 28112532,\n                \"principle\": 6846731,\n                \"interest\": 491969,\n                \"total\": 7338700,\n                \"outstanding_interest\": 0\n            },\n            {\n                \"installment\": 22,\n                \"outstanding\": 21265801,\n                \"principle\": 6966548,\n                \"interest\": 372152,\n                \"total\": 7338700,\n                \"outstanding_interest\": 0\n            },\n            {\n                \"installment\": 23,\n                \"outstanding\": 14299253,\n                \"principle\": 7088463,\n                \"interest\": 250237,\n                \"total\": 7338700,\n                \"outstanding_interest\": 0\n            },\n            {\n                \"installment\": 24,\n                \"outstanding\": 7210790,\n                \"principle\": 7210790,\n                \"interest\": 126509,\n                \"total\": 7337299,\n                \"outstanding_interest\": 0\n            }\n        ]\n    },\n    \"status\": true\n}"
+        }
+      ]
+    },
+    {
+      "name": "Get Asuransi Tambahan ",
+      "id": "a136369c-a156-4966-a060-140601f5ae6c",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"flag_order_type\": \"ND\",\r\n    \"order_id\": \"2406000051\",\r\n    \"tenor\": \"24\",\r\n    \"obj_price\": 235000000,\r\n    \"finance_type_code\": \"1\",\r\n    \"channel_code\": \"01\",\r\n    \"insurance_type\": \"PA\",\r\n    \"insurance_area_id\": \"00\",\r\n    \"obj_code\": \"003\",\r\n    \"insurance_comp_id\": \"03\",\r\n    \"total_principal_amount\": 142815000,\r\n    \"order_created_date\": \"04-06-2024\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://calculate-structure-credit-java-dev.apps.ocp4dev.muf.co.id/getAddtInsurance",
+          "protocol": "http",
+          "host": [
+            "calculate-structure-credit-java-dev",
+            "apps",
+            "ocp4dev",
+            "muf",
+            "co",
+            "id"
+          ],
+          "path": [
+            "getAddtInsurance"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Asuransi Kerugian ",
+      "id": "ecf7ceed-8457-4ada-a617-8ad17ad4f797",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"flag_order_type\": \"ND\",\r\n    \"branch_code\": \"0107\",\r\n    \"fin_type_code\": \"1\",\r\n    \"insr_tenor\": \"24\",\r\n    \"insr_type_id\": \"2\",\r\n    \"obj_purpose_code\": \"06\",\r\n    \"insr_comp_id\": \"03\",\r\n    \"obj_price\": 235000000,\r\n    \"insr_area_id\": \"02\",\r\n    \"obj_group_code\": \"001\",\r\n    \"flag_srcc\": \"N\",\r\n    \"flag_flh\": \"N\",\r\n    \"flag_tjh\": \"N\",\r\n    \"flag_ts\": \"N\",\r\n    \"flag_eqts\": \"N\",\r\n    \"flag_pa_driver\": \"N\",\r\n    \"limit_liability\": \"0\",\r\n    \"order_id\": \"2406000051\",\r\n    \"brand_desc\": \"HONDA\",\r\n    \"model_desc\": \"BRIO CKD E AT\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://calculate-structure-credit-java-dev.apps.ocp4dev.muf.co.id/getCalcInsurance",
+          "protocol": "http",
+          "host": [
+            "calculate-structure-credit-java-dev",
+            "apps",
+            "ocp4dev",
+            "muf",
+            "co",
+            "id"
+          ],
+          "path": [
+            "getCalcInsurance"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}

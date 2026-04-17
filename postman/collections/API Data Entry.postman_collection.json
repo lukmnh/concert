@@ -1,0 +1,2242 @@
+{
+  "info": {
+    "_postman_id": "ca6b76b1-9f5d-431e-9958-f2c267eeb67a",
+    "name": "API Data Entry",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Tab Identitas",
+      "item": [
+        {
+          "name": "getIdentityCardTypeCustomer",
+          "id": "28ab3225-9375-4f3c-8a8b-ca8de7fdcc0d",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://master-jenis-identitas-java-dev.apps.ocp4dev.muf.co.id/getIdentityCardTypeCustomer",
+              "protocol": "http",
+              "host": [
+                "master-jenis-identitas-java-dev",
+                "apps",
+                "ocp4dev",
+                "muf",
+                "co",
+                "id"
+              ],
+              "path": [
+                "getIdentityCardTypeCustomer"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getIdentityCardTypeSpouse",
+          "id": "4a8578cf-6089-4f84-891f-0a5aaf2593d8",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://master-jenis-identitas-java-dev.apps.ocp4dev.muf.co.id/getIdentityCardTypeSpouse",
+              "protocol": "http",
+              "host": [
+                "master-jenis-identitas-java-dev",
+                "apps",
+                "ocp4dev",
+                "muf",
+                "co",
+                "id"
+              ],
+              "path": [
+                "getIdentityCardTypeSpouse"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getAllMarital",
+          "id": "4df50fdb-11e3-417b-be7a-d361ea7c8a67",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "http://master-acq-param-java-dev.apps.ocp4dev.muf.co.id/getAllMarital",
+              "protocol": "http",
+              "host": [
+                "master-acq-param-java-dev",
+                "apps",
+                "ocp4dev",
+                "muf",
+                "co",
+                "id"
+              ],
+              "path": [
+                "getAllMarital"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getDataByZipcode",
+          "id": "67964b93-c82b-47fd-a884-30a3cb8108df",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"value\": \"12710\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://master-zip-code-java-dev.apps.ocp4dev.muf.co.id/getDataByZipcode",
+              "protocol": "http",
+              "host": [
+                "master-zip-code-java-dev",
+                "apps",
+                "ocp4dev",
+                "muf",
+                "co",
+                "id"
+              ],
+              "path": [
+                "getDataByZipcode"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getAllNationality",
+          "id": "ce092334-8f59-4e6a-aa5b-3704422da48f",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://master-nationality-java-dev.apps.ocp4dev.muf.co.id/getAllNationality",
+              "protocol": "http",
+              "host": [
+                "master-nationality-java-dev",
+                "apps",
+                "ocp4dev",
+                "muf",
+                "co",
+                "id"
+              ],
+              "path": [
+                "getAllNationality"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getAllPendidikan",
+          "id": "06dbcf0b-1805-40e7-827c-c15c00932879",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://master-pendidikan-java-dev.apps.ocp4dev.muf.co.id/getAllPendidikan",
+              "protocol": "http",
+              "host": [
+                "master-pendidikan-java-dev",
+                "apps",
+                "ocp4dev",
+                "muf",
+                "co",
+                "id"
+              ],
+              "path": [
+                "getAllPendidikan"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getAllJenisBadanUsaha",
+          "id": "877f128f-dc4b-473b-9cb8-945c8389ad2a",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://master-jenis-badan-usaha-java-dev.apps.ocp4dev.muf.co.id/getAllJenisBadanUsaha",
+              "protocol": "http",
+              "host": [
+                "master-jenis-badan-usaha-java-dev",
+                "apps",
+                "ocp4dev",
+                "muf",
+                "co",
+                "id"
+              ],
+              "path": [
+                "getAllJenisBadanUsaha"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getAllPenanamanModal",
+          "id": "a73c2be3-356e-4f01-b084-354d4bc6c6d6",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://master-penanaman-modal-java-dev.apps.ocp4dev.muf.co.id/getAllPenanamanModal",
+              "protocol": "http",
+              "host": [
+                "master-penanaman-modal-java-dev",
+                "apps",
+                "ocp4dev",
+                "muf",
+                "co",
+                "id"
+              ],
+              "path": [
+                "getAllPenanamanModal"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getAllKepemilikanBadanUsaha",
+          "id": "7f64dc22-780e-4c05-8149-fe9e049234a3",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://master-kepemilikan-badan-usaha-java-dev.apps.ocp4dev.muf.co.id/getAllKepemilikanBadanUsaha",
+              "protocol": "http",
+              "host": [
+                "master-kepemilikan-badan-usaha-java-dev",
+                "apps",
+                "ocp4dev",
+                "muf",
+                "co",
+                "id"
+              ],
+              "path": [
+                "getAllKepemilikanBadanUsaha"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getAllStatusLokasi",
+          "id": "e0113154-b5c1-4b81-9d57-f931e3392f7d",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://master-status-lokasi-java-dev.apps.ocp4dev.muf.co.id/getAll",
+              "protocol": "http",
+              "host": [
+                "master-status-lokasi-java-dev",
+                "apps",
+                "ocp4dev",
+                "muf",
+                "co",
+                "id"
+              ],
+              "path": [
+                "getAll"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getAllLokasiUsaha",
+          "id": "bdeeb8ed-a7fc-4f99-a170-07a342950f4d",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://master-lokasi-usaha-java-dev.apps.ocp4dev.muf.co.id/getAll",
+              "protocol": "http",
+              "host": [
+                "master-lokasi-usaha-java-dev",
+                "apps",
+                "ocp4dev",
+                "muf",
+                "co",
+                "id"
+              ],
+              "path": [
+                "getAll"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getAllNasabahBank",
+          "id": "876ab39a-2f1f-49ee-8fec-634def86df98",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": ""
+            }
+          },
+          "response": []
+        }
+      ],
+      "id": "f46f212c-3ff3-42b3-b7a0-a5d0d2c35eb4"
+    },
+    {
+      "name": "Tab Pekerjaan",
+      "item": [
+        {
+          "name": "getPekerjaanDebitur",
+          "id": "8405bc16-7f64-44e7-bfe5-feb83a7b06ff",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://master-acq-param-java-dev.apps.ocp4dev.muf.co.id/getPekerjaanDebitur",
+              "protocol": "http",
+              "host": [
+                "master-acq-param-java-dev",
+                "apps",
+                "ocp4dev",
+                "muf",
+                "co",
+                "id"
+              ],
+              "path": [
+                "getPekerjaanDebitur"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getPekerjaanPasangan",
+          "id": "bc9a072a-2ac9-445a-91ad-021697bfe38f",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://master-acq-param-java-dev.apps.ocp4dev.muf.co.id/getPekerjaanPasangan",
+              "protocol": "http",
+              "host": [
+                "master-acq-param-java-dev",
+                "apps",
+                "ocp4dev",
+                "muf",
+                "co",
+                "id"
+              ],
+              "path": [
+                "getPekerjaanPasangan"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getJenisTempat",
+          "id": "8092946c-5d49-42b8-8700-eea996061ffc",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"pekerjaan_code\": \"01\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://master-acq-param-java-dev.apps.ocp4dev.muf.co.id/getJenisTempat",
+              "protocol": "http",
+              "host": [
+                "master-acq-param-java-dev",
+                "apps",
+                "ocp4dev",
+                "muf",
+                "co",
+                "id"
+              ],
+              "path": [
+                "getJenisTempat"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getJabatanDanBidangUsaha",
+          "id": "29b163e8-52c3-43a7-afa9-47219fac08c5",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"pekerjaan_code\": \"01\",\r\n    \"jenis_tempat_code\": \"12\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://master-acq-param-java-dev.apps.ocp4dev.muf.co.id/getJabatanDanBidangUsaha",
+              "protocol": "http",
+              "host": [
+                "master-acq-param-java-dev",
+                "apps",
+                "ocp4dev",
+                "muf",
+                "co",
+                "id"
+              ],
+              "path": [
+                "getJabatanDanBidangUsaha"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getStatusPegawai",
+          "id": "23a7888e-590f-486f-be6b-e3de5b7707aa",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://master-acq-param-java-dev.apps.ocp4dev.muf.co.id/getStatusPegawai",
+              "protocol": "http",
+              "host": [
+                "master-acq-param-java-dev",
+                "apps",
+                "ocp4dev",
+                "muf",
+                "co",
+                "id"
+              ],
+              "path": [
+                "getStatusPegawai"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getStatusLokasi",
+          "id": "5df776cf-aa46-46a6-8dd8-c794e33dfda8",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://master-acq-param-java-dev.apps.ocp4dev.muf.co.id/getStatusLokasi",
+              "protocol": "http",
+              "host": [
+                "master-acq-param-java-dev",
+                "apps",
+                "ocp4dev",
+                "muf",
+                "co",
+                "id"
+              ],
+              "path": [
+                "getStatusLokasi"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getLokasiUsaha",
+          "id": "e0d1ac10-0351-4bdc-a964-289c63791cf7",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://master-acq-param-java-dev.apps.ocp4dev.muf.co.id/getLokasiUsaha",
+              "protocol": "http",
+              "host": [
+                "master-acq-param-java-dev",
+                "apps",
+                "ocp4dev",
+                "muf",
+                "co",
+                "id"
+              ],
+              "path": [
+                "getLokasiUsaha"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getEconomicSectorFromLevel3",
+          "id": "a163606d-07fa-4fe7-9f01-2f7f3a97a135",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"value\": \"\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://master-economic-sector-java-dev.apps.ocp4dev.muf.co.id/getEconomicSectorFromLevel3",
+              "protocol": "http",
+              "host": [
+                "master-economic-sector-java-dev",
+                "apps",
+                "ocp4dev",
+                "muf",
+                "co",
+                "id"
+              ],
+              "path": [
+                "getEconomicSectorFromLevel3"
+              ]
+            }
+          },
+          "response": []
+        }
+      ],
+      "id": "674cfd7f-2f93-46ad-8760-8d26d43f0863"
+    },
+    {
+      "name": "Tab Pendapatan",
+      "item": [
+        {
+          "name": "getAllMasterSourceOfIncome",
+          "id": "673aedab-62ec-4932-a5bf-a2d070cf2c56",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://master-sumber-pendapatan-java-dev.apps.ocp4dev.muf.co.id/getAllMasterSourceOfIncome",
+              "protocol": "http",
+              "host": [
+                "master-sumber-pendapatan-java-dev",
+                "apps",
+                "ocp4dev",
+                "muf",
+                "co",
+                "id"
+              ],
+              "path": [
+                "getAllMasterSourceOfIncome"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getIncomeKaryawan",
+          "id": "99cb851d-a9d3-4b1b-8d80-84c7069687f1",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"no_ktp_debitur\": \"6105070508930002\",\r\n    \"no_ktp_pasangan\": \"\",\r\n    \"marital_status_code\": \"04\",\r\n    \"deb_main_income\": \"50000000\",\r\n    \"deb_other_income\": \"0\",\r\n    \"spouse_main_income\": \"0\",\r\n    \"flag_join_income\": \"N\",\r\n    \"deb_muf_installment_proposed\": \"7002100\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://calculate-income-java-dev.apps.ocp4dev.muf.co.id/getIncomeKaryawan",
+              "protocol": "http",
+              "host": [
+                "calculate-income-java-dev",
+                "apps",
+                "ocp4dev",
+                "muf",
+                "co",
+                "id"
+              ],
+              "path": [
+                "getIncomeKaryawan"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getIncomeWiraProf",
+          "id": "b1ed4ae1-53ca-489e-a6ed-cdefba35b7d8",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"no_ktp_debitur\": \"6105070508930002\",\r\n    \"no_ktp_pasangan\": \"\",\r\n    \"marital_status_code\": \"04\",\r\n    \"deb_operating_income\": \"5000000\",\r\n    \"deb_capital_cost\": \"800000\",\r\n    \"deb_operational_cost\": \"200000\",\r\n    \"deb_other_income\": \"0\",\r\n    \"spouse_main_income\": \"\",\r\n    \"flag_join_income\": \"N\",\r\n    \"deb_muf_installment_proposed\": \"1395000\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://calculate-income-java-dev.apps.ocp4dev.muf.co.id/getIncomeWiraProf",
+              "protocol": "http",
+              "host": [
+                "calculate-income-java-dev",
+                "apps",
+                "ocp4dev",
+                "muf",
+                "co",
+                "id"
+              ],
+              "path": [
+                "getIncomeWiraProf"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getIncomeCompany",
+          "id": "f31df7e7-2fbd-4cb2-a14b-ce738ad0526c",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"no_npwp\": \"\",\r\n    \"com_operating_income\": 10000,\r\n    \"com_capital_cost\": 10,\r\n    \"com_operational_cost\": 1,\r\n    \"com_muf_installment_proposed\": \"\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://calculate-income-java-dev.apps.ocp4dev.muf.co.id/getIncomeCompany",
+              "protocol": "http",
+              "host": [
+                "calculate-income-java-dev",
+                "apps",
+                "ocp4dev",
+                "muf",
+                "co",
+                "id"
+              ],
+              "path": [
+                "getIncomeCompany"
+              ]
+            }
+          },
+          "response": []
+        }
+      ],
+      "id": "04f6057b-7eb8-4864-a523-881a48ff5ea2"
+    },
+    {
+      "name": "Tab Identitas Order",
+      "item": [
+        {
+          "name": "getAllChannel",
+          "id": "d63729e4-4e6d-444a-b3fc-9ffc3a1971c1",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://master-acq-param-java-dev.apps.ocp4dev.muf.co.id/getAllChannel",
+              "protocol": "http",
+              "host": [
+                "master-acq-param-java-dev",
+                "apps",
+                "ocp4dev",
+                "muf",
+                "co",
+                "id"
+              ],
+              "path": [
+                "getAllChannel"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getBranchOutlet",
+          "id": "3a6ad0ec-6486-4561-a7a0-05ef986a8b03",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://master-branch-outlet-java-dev.apps.ocp4dev.muf.co.id/getBranchOutlet/0107",
+              "protocol": "http",
+              "host": [
+                "master-branch-outlet-java-dev",
+                "apps",
+                "ocp4dev",
+                "muf",
+                "co",
+                "id"
+              ],
+              "path": [
+                "getBranchOutlet",
+                "0107"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getMarketingProduct",
+          "id": "de33ac8b-6c33-4218-98d8-98e24b2b3b46",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n        \"channel_code\" : \"02\",\r\n        \"fin_purpose_code\": \"01\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://master-marketing-product-java-dev.apps.ocp4dev.muf.co.id/getMarketingProduct",
+              "protocol": "http",
+              "host": [
+                "master-marketing-product-java-dev",
+                "apps",
+                "ocp4dev",
+                "muf",
+                "co",
+                "id"
+              ],
+              "path": [
+                "getMarketingProduct"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getCustSourceWithChannel",
+          "id": "7981dfff-1243-486c-9019-0d3477d83b13",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://master-customer-source-java-dev.apps.ocp4dev.muf.co.id/getCustSourceWithChannel/02",
+              "protocol": "http",
+              "host": [
+                "master-customer-source-java-dev",
+                "apps",
+                "ocp4dev",
+                "muf",
+                "co",
+                "id"
+              ],
+              "path": [
+                "getCustSourceWithChannel",
+                "02"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getHierarkyFinancing",
+          "id": "1e96f3a7-ac56-4225-b824-d7d5e02e58b3",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n        \"financing_type_code\" : \"1\",\r\n        \"applicant_type_code\": \"COM\",\r\n        \"type_of_financing_code\": \"02\",\r\n        \"fin_scheme_code\": \"\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://master-financing-matrix-java-dev.apps.ocp4dev.muf.co.id/getHierarkyFinancing",
+              "protocol": "http",
+              "host": [
+                "master-financing-matrix-java-dev",
+                "apps",
+                "ocp4dev",
+                "muf",
+                "co",
+                "id"
+              ],
+              "path": [
+                "getHierarkyFinancing"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getExtIntSalesJob",
+          "id": "acbb90af-45be-4dad-8ad1-a82a9044331d",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"sales_force_type\" : \"2\",\r\n    \"channel_code\": \"04\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://master-acq-param-java-dev.apps.ocp4dev.muf.co.id/getExtIntSalesJob",
+              "protocol": "http",
+              "host": [
+                "master-acq-param-java-dev",
+                "apps",
+                "ocp4dev",
+                "muf",
+                "co",
+                "id"
+              ],
+              "path": [
+                "getExtIntSalesJob"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getExternalForce",
+          "id": "f5afb6b7-b0a7-4342-b469-68861e57b529",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"sales_channel\": \"02\",\r\n    \"job_code\": \"KRY\",\r\n    \"outlet_code\": \"520\",\r\n    \"branch_code\": \"0201\",\r\n    \"sales_type\": \"2\",\r\n    \"value\": \"ROPI IRAWAN\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://master-external-sales-force-java-dev.apps.ocp4dev.muf.co.id/getExternalForce",
+              "protocol": "http",
+              "host": [
+                "master-external-sales-force-java-dev",
+                "apps",
+                "ocp4dev",
+                "muf",
+                "co",
+                "id"
+              ],
+              "path": [
+                "getExternalForce"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getAllExternalType",
+          "id": "11e87c58-8579-4ce2-ac0c-b058f922bb1c",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://master-acq-param-java-dev.apps.ocp4dev.muf.co.id/getAllExternalType",
+              "protocol": "http",
+              "host": [
+                "master-acq-param-java-dev",
+                "apps",
+                "ocp4dev",
+                "muf",
+                "co",
+                "id"
+              ],
+              "path": [
+                "getAllExternalType"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getOutletChannelDealer",
+          "id": "1933ae29-2d3b-4220-b86b-4e85d6b9f17e",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"value\" : \"\",\r\n    \"branch_code\": \"0201\",\r\n    \"jenis_dealer\": \"1\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://master-outlet-channel-dealer-java-dev.apps.ocp4dev.muf.co.id/getOutletChannelDealer",
+              "protocol": "http",
+              "host": [
+                "master-outlet-channel-dealer-java-dev",
+                "apps",
+                "ocp4dev",
+                "muf",
+                "co",
+                "id"
+              ],
+              "path": [
+                "getOutletChannelDealer"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getAllInternalType",
+          "id": "75025c7c-c3d7-4ea7-b5f2-8cdd8a77bbcf",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://master-acq-param-java-dev.apps.ocp4dev.muf.co.id/getAllInternalType",
+              "protocol": "http",
+              "host": [
+                "master-acq-param-java-dev",
+                "apps",
+                "ocp4dev",
+                "muf",
+                "co",
+                "id"
+              ],
+              "path": [
+                "getAllInternalType"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getAllGroupCustomer",
+          "id": "4949fd93-3f2f-4680-a745-d15686558af4",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://master-group-customer-java-dev.apps.ocp4dev.muf.co.id/getAllGroupCustomer/RS",
+              "protocol": "http",
+              "host": [
+                "master-group-customer-java-dev",
+                "apps",
+                "ocp4dev",
+                "muf",
+                "co",
+                "id"
+              ],
+              "path": [
+                "getAllGroupCustomer",
+                "RS"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getJaringanBank",
+          "id": "d013784f-dc16-41e0-a832-e22941f0b0e0",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"value\": \"BSI KC JAKARTA\",\r\n    \"branch_code\": \"0107\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://master-outlet-channel-dealer-java-dev.apps.ocp4dev.muf.co.id/getJaringanBank",
+              "protocol": "http",
+              "host": [
+                "master-outlet-channel-dealer-java-dev",
+                "apps",
+                "ocp4dev",
+                "muf",
+                "co",
+                "id"
+              ],
+              "path": [
+                "getJaringanBank"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getAllBranch",
+          "id": "4167d6eb-58c0-46f6-98c4-d7a221911e5a",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://master-acq-param-java-dev.apps.ocp4dev.muf.co.id/getAllBranch",
+              "protocol": "http",
+              "host": [
+                "master-acq-param-java-dev",
+                "apps",
+                "ocp4dev",
+                "muf",
+                "co",
+                "id"
+              ],
+              "path": [
+                "getAllBranch"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getAllSlsHeadJob",
+          "id": "48b555be-a7c6-4e06-9e58-1257dd687fe3",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://master-acq-param-java-dev.apps.ocp4dev.muf.co.id/getAllSlsHeadJob",
+              "protocol": "http",
+              "host": [
+                "master-acq-param-java-dev",
+                "apps",
+                "ocp4dev",
+                "muf",
+                "co",
+                "id"
+              ],
+              "path": [
+                "getAllSlsHeadJob"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getInternalForce",
+          "id": "066e8178-780c-417c-8b6a-594416ea85eb",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"sales_channel\": \"04\",\r\n    \"job_code\": \"CMH\",\r\n    \"branch_code\": \"0107\",\r\n    \"sales_type\": \"1\",\r\n    \"value\": \"AN\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://master-internal-sales-force-java-dev.apps.ocp4dev.muf.co.id/getInternalForce",
+              "protocol": "http",
+              "host": [
+                "master-internal-sales-force-java-dev",
+                "apps",
+                "ocp4dev",
+                "muf",
+                "co",
+                "id"
+              ],
+              "path": [
+                "getInternalForce"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getAllFinanceType",
+          "id": "9ff204d3-2431-4e98-8b84-d2f17c566c20",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://master-acq-param-java-dev.apps.ocp4dev.muf.co.id/getAllFinanceType",
+              "protocol": "http",
+              "host": [
+                "master-acq-param-java-dev",
+                "apps",
+                "ocp4dev",
+                "muf",
+                "co",
+                "id"
+              ],
+              "path": [
+                "getAllFinanceType"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getFlagByFinSceheme",
+          "id": "a6b58822-2b4c-4a1c-9907-1b96b209420d",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"financing_object_code\":\"FO01\",\r\n    \"type_of_financing_code\":\"03\",\r\n    \"fin_scheme_code\":\"09\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://master-acq-param-java-dev.apps.ocp4dev.muf.co.id/getFlagByFinSceheme",
+              "protocol": "http",
+              "host": [
+                "master-acq-param-java-dev",
+                "apps",
+                "ocp4dev",
+                "muf",
+                "co",
+                "id"
+              ],
+              "path": [
+                "getFlagByFinSceheme"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getTypeOfFinancing",
+          "id": "8844860d-a250-4227-bb75-38b108c60b89",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"finance_type_code\":\"1\",\r\n    \"applicant_type_code\":\"PER\",\r\n    \"financing_object_code\":\"FO01\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://master-acq-param-java-dev.apps.ocp4dev.muf.co.id/getTypeOfFinancing",
+              "protocol": "http",
+              "host": [
+                "master-acq-param-java-dev",
+                "apps",
+                "ocp4dev",
+                "muf",
+                "co",
+                "id"
+              ],
+              "path": [
+                "getTypeOfFinancing"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getAllPemilikSaham",
+          "id": "80b5d96a-88e1-4197-999c-e06449d42e28",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://master-pemilik-saham-java-dev.apps.ocp4dev.muf.co.id/getAllPemilikSaham",
+              "protocol": "http",
+              "host": [
+                "master-pemilik-saham-java-dev",
+                "apps",
+                "ocp4dev",
+                "muf",
+                "co",
+                "id"
+              ],
+              "path": [
+                "getAllPemilikSaham"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getAllJabatanPemegangSaham",
+          "id": "54375082-9830-4993-901e-1e49d6e006fb",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://master-jabatan-pemegang-saham-java-dev.apps.ocp4dev.muf.co.id/getAllJabatanPemegangSaham",
+              "protocol": "http",
+              "host": [
+                "master-jabatan-pemegang-saham-java-dev",
+                "apps",
+                "ocp4dev",
+                "muf",
+                "co",
+                "id"
+              ],
+              "path": [
+                "getAllJabatanPemegangSaham"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getAllJabatanPicPerusahaan",
+          "id": "49c3f35d-ec22-4a3f-854f-5e2ad20fd8d0",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://master-jabatan-pic-perusahaan-java-dev.apps.ocp4dev.muf.co.id/getAllJabatanPicPerusahaan",
+              "protocol": "http",
+              "host": [
+                "master-jabatan-pic-perusahaan-java-dev",
+                "apps",
+                "ocp4dev",
+                "muf",
+                "co",
+                "id"
+              ],
+              "path": [
+                "getAllJabatanPicPerusahaan"
+              ]
+            }
+          },
+          "response": []
+        }
+      ],
+      "id": "5808b929-486c-4120-941a-26eccc031c56"
+    },
+    {
+      "name": "Tab Objek Pembiayaan",
+      "item": [
+        {
+          "name": "getAllObject",
+          "id": "adb1c9bd-7351-4f33-93b1-f00d248acb5c",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://master-acq-param-java-dev.apps.ocp4dev.muf.co.id/getAllObject",
+              "protocol": "http",
+              "host": [
+                "master-acq-param-java-dev",
+                "apps",
+                "ocp4dev",
+                "muf",
+                "co",
+                "id"
+              ],
+              "path": [
+                "getAllObject"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getObjectSupply",
+          "id": "e0b6d61f-aca7-4775-bd15-ddc9447dddde",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"dealer\": \"00Q764\",\r\n    \"object\": \"003\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://redis-mst-object-dev.apps.ocp4dev.muf.co.id/getObjectSupply",
+              "protocol": "http",
+              "host": [
+                "redis-mst-object-dev",
+                "apps",
+                "ocp4dev",
+                "muf",
+                "co",
+                "id"
+              ],
+              "path": [
+                "getObjectSupply"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getAllModelByBrand",
+          "id": "1fd0e262-cc8d-4679-b21f-57898baa6f78",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"obj_brand_desc\": \"TOYOTA\",\r\n    \"obj_code\": \"003\",\r\n    \"cust_type\": \"PER\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://master-model-by-brand-java-dev.apps.ocp4dev.muf.co.id/getAllModelByBrand",
+              "protocol": "http",
+              "host": [
+                "master-model-by-brand-java-dev",
+                "apps",
+                "ocp4dev",
+                "muf",
+                "co",
+                "id"
+              ],
+              "path": [
+                "getAllModelByBrand"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getAllWarnaPlat",
+          "id": "e12d496c-aa0f-4f00-aa8a-d402a3b5306d",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://master-warna-plat-java-dev.apps.ocp4dev.muf.co.id/getAllWarnaPlat",
+              "protocol": "http",
+              "host": [
+                "master-warna-plat-java-dev",
+                "apps",
+                "ocp4dev",
+                "muf",
+                "co",
+                "id"
+              ],
+              "path": [
+                "getAllWarnaPlat"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getAllKetersediaanUnit",
+          "id": "624dc17c-3e99-4f45-b06e-3665727f7d5c",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://master-ketersediaan-unit-java-dev.apps.ocp4dev.muf.co.id/getAllKetersediaanUnit",
+              "protocol": "http",
+              "host": [
+                "master-ketersediaan-unit-java-dev",
+                "apps",
+                "ocp4dev",
+                "muf",
+                "co",
+                "id"
+              ],
+              "path": [
+                "getAllKetersediaanUnit"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getMappingRelationWithNasabah",
+          "id": "98b1f9d3-5354-45be-abf5-0e36f7ec1047",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"obj_code\": \"003\",\r\n    \"gender\": \"P\",\r\n    \"marital_id\": \"01\",\r\n    \"applicant_type_code\": \"PER\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://master-relation-with-nasabah-java-dev.apps.ocp4dev.muf.co.id/getMappingRelationWithNasabah",
+              "protocol": "http",
+              "host": [
+                "master-relation-with-nasabah-java-dev",
+                "apps",
+                "ocp4dev",
+                "muf",
+                "co",
+                "id"
+              ],
+              "path": [
+                "getMappingRelationWithNasabah"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getAdvanceArrear",
+          "id": "93d05574-230d-4d60-9cc3-e9a42399d59d",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://master-advance-arrear-java-dev.apps.ocp4dev.muf.co.id/getAdvanceArrear",
+              "protocol": "http",
+              "host": [
+                "master-advance-arrear-java-dev",
+                "apps",
+                "ocp4dev",
+                "muf",
+                "co",
+                "id"
+              ],
+              "path": [
+                "getAdvanceArrear"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getJenisAsuransi",
+          "id": "251da506-c6d9-416e-8767-9afa25169870",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://master-insurance-type-java-dev.apps.ocp4dev.muf.co.id/getJenisAsuransi",
+              "protocol": "http",
+              "host": [
+                "master-insurance-type-java-dev",
+                "apps",
+                "ocp4dev",
+                "muf",
+                "co",
+                "id"
+              ],
+              "path": [
+                "getJenisAsuransi"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getJenisAsuransi2",
+          "id": "6de146f0-61f8-42a3-8626-1ca894f58215",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://master-jenis-asuransi2-java-dev.apps.ocp4dev.muf.co.id/getJenisAsuransi",
+              "protocol": "http",
+              "host": [
+                "master-jenis-asuransi2-java-dev",
+                "apps",
+                "ocp4dev",
+                "muf",
+                "co",
+                "id"
+              ],
+              "path": [
+                "getJenisAsuransi"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getPerusahaanAsuransi",
+          "id": "1d88d72d-978c-4630-b058-cd5800cd2ff5",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"insr_fin_type\":1\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://master-insurance-company-java-dev.apps.ocp4dev.muf.co.id/getPerusahaanAsuransi",
+              "protocol": "http",
+              "host": [
+                "master-insurance-company-java-dev",
+                "apps",
+                "ocp4dev",
+                "muf",
+                "co",
+                "id"
+              ],
+              "path": [
+                "getPerusahaanAsuransi"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getPerusahaanAsuransiTambahan",
+          "id": "20209c93-5d41-428c-a701-0a8daa55c3f7",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"insr_fin_type\": \"1\",\r\n    \"additional_insurance_type_code\": \"PA\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://master-insurance-company-java-dev.apps.ocp4dev.muf.co.id/getPerusahaanAsuransiTambahan",
+              "protocol": "http",
+              "host": [
+                "master-insurance-company-java-dev",
+                "apps",
+                "ocp4dev",
+                "muf",
+                "co",
+                "id"
+              ],
+              "path": [
+                "getPerusahaanAsuransiTambahan"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getWilayahAsuransi",
+          "id": "cdae8832-33d8-4637-835f-fdea8696601a",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"branch_code\": \"0107\",\r\n    \"obj_group\": \"001\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://master-insurance-company-java-dev.apps.ocp4dev.muf.co.id/getWilayahAsuransi",
+              "protocol": "http",
+              "host": [
+                "master-insurance-company-java-dev",
+                "apps",
+                "ocp4dev",
+                "muf",
+                "co",
+                "id"
+              ],
+              "path": [
+                "getWilayahAsuransi"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getFiducia",
+          "id": "0893357b-4eee-4d91-8a49-379322970e11",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"total_amount\": 176127399\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://calculate-structure-credit-java-dev.apps.ocp4dev.muf.co.id/getFiducia",
+              "protocol": "http",
+              "host": [
+                "calculate-structure-credit-java-dev",
+                "apps",
+                "ocp4dev",
+                "muf",
+                "co",
+                "id"
+              ],
+              "path": [
+                "getFiducia"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getEffrate",
+          "id": "73edcaed-7680-4a62-94e6-2761ad18d262",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"tenor\": 24,\r\n    \"installment_amount\": 7338700,\r\n    \"installment_type\": \"02\",\r\n    \"flat_rate\": 12,\r\n    \"total_principal_amount\": 142815000\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://calculate-structure-credit-java-dev.apps.ocp4dev.muf.co.id/getEffRate",
+              "protocol": "http",
+              "host": [
+                "calculate-structure-credit-java-dev",
+                "apps",
+                "ocp4dev",
+                "muf",
+                "co",
+                "id"
+              ],
+              "path": [
+                "getEffRate"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getFlatRate",
+          "id": "5822f439-cf82-42a7-a01a-adbf50d9d004",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": " {\r\n    \"tenor\": 12,\r\n    \"installment_amount\": 1000000,\r\n    \"installment_type\": \"02\",\r\n    \"eff_rate\": 21,\r\n    \"total_principal_amount\": 3200000\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://calculate-structure-credit-java-dev.apps.ocp4dev.muf.co.id/getFlatRate",
+              "protocol": "http",
+              "host": [
+                "calculate-structure-credit-java-dev",
+                "apps",
+                "ocp4dev",
+                "muf",
+                "co",
+                "id"
+              ],
+              "path": [
+                "getFlatRate"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getCalcInsurance",
+          "id": "3adfe714-3476-46b9-a46b-fad65efa9a84",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"flag_order_type\": \"ND\",\r\n    \"branch_code\": \"0107\",\r\n    \"fin_type_code\": \"1\",\r\n    \"insr_tenor\": \"24\",\r\n    \"insr_type_id\": \"2\",\r\n    \"obj_purpose_code\": \"06\",\r\n    \"insr_comp_id\": \"03\",\r\n    \"obj_price\": 235000000,\r\n    \"insr_area_id\": \"02\",\r\n    \"obj_group_code\": \"001\",\r\n    \"flag_srcc\": \"N\",\r\n    \"flag_flh\": \"N\",\r\n    \"flag_tjh\": \"N\",\r\n    \"flag_ts\": \"N\",\r\n    \"flag_eqts\": \"N\",\r\n    \"flag_pa_driver\": \"N\",\r\n    \"limit_liability\": \"0\",\r\n    \"order_id\": \"2406000051\",\r\n    \"brand_desc\": \"HONDA\",\r\n    \"model_desc\": \"BRIO CKD E AT\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://calculate-structure-credit-java-dev.apps.ocp4dev.muf.co.id/getCalcInsurance",
+              "protocol": "http",
+              "host": [
+                "calculate-structure-credit-java-dev",
+                "apps",
+                "ocp4dev",
+                "muf",
+                "co",
+                "id"
+              ],
+              "path": [
+                "getCalcInsurance"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getAddtInsurance",
+          "id": "f3f4a47e-b7d0-4547-a292-33942f44d89b",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"flag_order_type\": \"ND\",\r\n    \"order_id\": \"2406000051\",\r\n    \"tenor\": \"24\",\r\n    \"obj_price\": 235000000,\r\n    \"finance_type_code\": \"1\",\r\n    \"channel_code\": \"01\",\r\n    \"insurance_type\": \"PA\",\r\n    \"insurance_area_id\": \"00\",\r\n    \"obj_code\": \"003\",\r\n    \"insurance_comp_id\": \"03\",\r\n    \"total_principal_amount\": 142815000,\r\n    \"order_created_date\": \"04-06-2024\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://calculate-structure-credit-java-dev.apps.ocp4dev.muf.co.id/getAddtInsurance",
+              "protocol": "http",
+              "host": [
+                "calculate-structure-credit-java-dev",
+                "apps",
+                "ocp4dev",
+                "muf",
+                "co",
+                "id"
+              ],
+              "path": [
+                "getAddtInsurance"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getAnuitas",
+          "id": "270f0eb5-e02f-4872-be00-d07ce76e42d8",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"tipe\": \"ARR\",\r\n    \"otr\": 142815000,\r\n    \"eff_rate\": \"21\",\r\n    \"flat_rate\": \"11.66278\",\r\n    \"installment_amount\": 0,\r\n    \"obj_group_code\": \"002\",\r\n    \"tenor\": 12,\r\n    \"periode\": 1\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://calculate-structure-credit-java-dev.apps.ocp4dev.muf.co.id/getAnuitas",
+              "protocol": "http",
+              "host": [
+                "calculate-structure-credit-java-dev",
+                "apps",
+                "ocp4dev",
+                "muf",
+                "co",
+                "id"
+              ],
+              "path": [
+                "getAnuitas"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getAllInstallment",
+          "id": "7561a98c-3e02-4f2a-b77d-59107e59d10e",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://master-acq-param-java-dev.apps.ocp4dev.muf.co.id/getAllInstallment",
+              "protocol": "http",
+              "host": [
+                "master-acq-param-java-dev",
+                "apps",
+                "ocp4dev",
+                "muf",
+                "co",
+                "id"
+              ],
+              "path": [
+                "getAllInstallment"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getAllMarketingProgram",
+          "id": "ed0d2d77-36dc-48a3-99e4-decd092ee395",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"channel_code\": \"01\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://master-marketing-program-java-dev.apps.ocp4dev.muf.co.id/getAllMarketingProgram",
+              "protocol": "http",
+              "host": [
+                "master-marketing-program-java-dev",
+                "apps",
+                "ocp4dev",
+                "muf",
+                "co",
+                "id"
+              ],
+              "path": [
+                "getAllMarketingProgram"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getAllMarketingScheme",
+          "id": "91b36981-1618-45b1-98bb-264034538787",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"dealer_code\": \"00A115\",\r\n    \"branch_id\": \"0107\",\r\n    \"object_code\": \"003\",\r\n    \"channel_code\": \"01\",\r\n    \"marketing_program_id\": \"01\",\r\n    \"product_code\": \"\",\r\n    \"customer_code\": \"08\",\r\n    \"object_type_code\": \"\",\r\n    \"object_brand_code\": \"\",\r\n    \"object_model_code\": \"\"\r\n}\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://marketing-scheme-java-dev.apps.ocp4dev.muf.co.id/getAllMarketingScheme",
+              "protocol": "http",
+              "host": [
+                "marketing-scheme-java-dev",
+                "apps",
+                "ocp4dev",
+                "muf",
+                "co",
+                "id"
+              ],
+              "path": [
+                "getAllMarketingScheme"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getMatriksOjk",
+          "id": "9827c612-b63f-45e9-891e-148847bc8771",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"matriks_ojk\": \"2PER04410501\",\r\n    \"object_type\": \"104\",\r\n    \"object_code\": \"003\",\r\n    \"applicant_type_code\": \"PER\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://master-financing-matrix-java-dev.apps.ocp4dev.muf.co.id/getMatriksOjk",
+              "protocol": "http",
+              "host": [
+                "master-financing-matrix-java-dev",
+                "apps",
+                "ocp4dev",
+                "muf",
+                "co",
+                "id"
+              ],
+              "path": [
+                "getMatriksOjk"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getOutletSupplier",
+          "id": "72af4755-6ee6-433f-b38b-cdf6365db477",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"branch_code\": \"0001\",\r\n    \"jenis\": 0,\r\n    \"value\": \"\",\r\n    \"obj_brand\": \"000\",\r\n    \"obj_code\": \"001\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://master-outlet-channel-dealer-java-dev.apps.ocp4dev.muf.co.id/getOutletSupplier",
+              "protocol": "http",
+              "host": [
+                "master-outlet-channel-dealer-java-dev",
+                "apps",
+                "ocp4dev",
+                "muf",
+                "co",
+                "id"
+              ],
+              "path": [
+                "getOutletSupplier"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "selectDealerPaketRekening",
+          "id": "326e50a2-cbea-404b-8bc7-91f9742564f4",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"dealer_code\": \"00B017\",\r\n    \"channel_code\": \"01\",\r\n    \"mkt_product_code\": \"01\",\r\n    \"cust_origin_code\": \"08\",\r\n    \"mkt_program_code\": \"01\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://master-paket-rekening-java-dev.apps.ocp4dev.muf.co.id/selectDealerPaketRekening",
+              "protocol": "http",
+              "host": [
+                "master-paket-rekening-java-dev",
+                "apps",
+                "ocp4dev",
+                "muf",
+                "co",
+                "id"
+              ],
+              "path": [
+                "selectDealerPaketRekening"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "detailJoinMasterPaketRekening",
+          "id": "78139f54-30fc-44a2-9360-34249f5c41ef",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"paket_rek_id\": \"228476\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://master-paket-rekening-java-dev.apps.ocp4dev.muf.co.id/detailJoinMasterPaketRekening",
+              "protocol": "http",
+              "host": [
+                "master-paket-rekening-java-dev",
+                "apps",
+                "ocp4dev",
+                "muf",
+                "co",
+                "id"
+              ],
+              "path": [
+                "detailJoinMasterPaketRekening"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getTaksasiPrice",
+          "id": "6c2261e5-dc03-4192-b7ea-049e7c4eacf2",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"obty_code\": \"021\",\r\n    \"obbr_code\": \"00S\",\r\n    \"obmo_code\": \"59I\",\r\n    \"obj_year\": \"2021\",\r\n    \"object_code\": \"002\",\r\n    \"date\": \"07-MAR-2024\",\r\n    \"branch_code\": \"0107\",\r\n    \"dealer_code\": \"00O645\",\r\n    \"harga_kend\": 15015000\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://master-get-price-obj-model-java-dev.apps.ocp4dev.muf.co.id/getTaksasiPrice",
+              "protocol": "http",
+              "host": [
+                "master-get-price-obj-model-java-dev",
+                "apps",
+                "ocp4dev",
+                "muf",
+                "co",
+                "id"
+              ],
+              "path": [
+                "getTaksasiPrice"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getTaksasiPriceWithUpping",
+          "id": "2b9a3ade-f293-46d2-9534-1f0b8ba7ac29",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"obty_code\": \"021\",\r\n    \"obbr_code\": \"00S\",\r\n    \"obmo_code\": \"59I\",\r\n    \"obj_year\": \"2021\",\r\n    \"object_code\": \"002\",\r\n    \"date\": \"07-MAR-2024\",\r\n    \"branch_code\": \"0107\",\r\n    \"dealer_code\": \"00O645\",\r\n    \"harga_kend\": 15015000\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://master-get-price-obj-model-java-dev.apps.ocp4dev.muf.co.id/getTaksasiPriceWithUpping",
+              "protocol": "http",
+              "host": [
+                "master-get-price-obj-model-java-dev",
+                "apps",
+                "ocp4dev",
+                "muf",
+                "co",
+                "id"
+              ],
+              "path": [
+                "getTaksasiPriceWithUpping"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getInstallmentByFinObj",
+          "id": "f9fde1a3-0b4a-408a-9faa-45d2e168a238",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"financing_object_code\":\"FO01\"\r\n} ",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://master-acq-param-java-dev.apps.ocp4dev.muf.co.id/getInstallmentByFinObj",
+              "protocol": "http",
+              "host": [
+                "master-acq-param-java-dev",
+                "apps",
+                "ocp4dev",
+                "muf",
+                "co",
+                "id"
+              ],
+              "path": [
+                "getInstallmentByFinObj"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getMapSupplier",
+          "id": "50fe5e77-5842-4df8-aaf9-3d790420961f",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"fin_purpose_code\":\"10\",\r\n    \"channel_code\":\"04\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://master-acq-param-java-uat.apps.ocp4dev.muf.co.id/getMapSupplier",
+              "protocol": "http",
+              "host": [
+                "master-acq-param-java-uat",
+                "apps",
+                "ocp4dev",
+                "muf",
+                "co",
+                "id"
+              ],
+              "path": [
+                "getMapSupplier"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getDealerChannel",
+          "id": "b0047da7-6c6e-4f30-9e83-c737eac3d2a3",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"channel_code\":\"01\",\r\n    \"object_code\": \"001\",\r\n    \"brand_code\": \"000\",\r\n    \"branch_code\": \"0001\",\r\n    \"dealer_name\": \"DEALER KRIANGGA\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://redis-mst-object-dev.apps.ocp4dev.muf.co.id/getDealerChannel",
+              "protocol": "http",
+              "host": [
+                "redis-mst-object-dev",
+                "apps",
+                "ocp4dev",
+                "muf",
+                "co",
+                "id"
+              ],
+              "path": [
+                "getDealerChannel"
+              ]
+            }
+          },
+          "response": []
+        }
+      ],
+      "id": "4856b14d-29b0-4fc8-8a39-4cccadfd0526"
+    },
+    {
+      "name": "tab kepimilikan",
+      "item": [
+        {
+          "name": "getAllStatusRumah",
+          "id": "4a3ce2fa-c6b2-498f-a1df-bcad32ba48a8",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://master-status-kepemilikan-rumah-java-dev.apps.ocp4dev.muf.co.id/getAllStatusRumah",
+              "protocol": "http",
+              "host": [
+                "master-status-kepemilikan-rumah-java-dev",
+                "apps",
+                "ocp4dev",
+                "muf",
+                "co",
+                "id"
+              ],
+              "path": [
+                "getAllStatusRumah"
+              ]
+            }
+          },
+          "response": []
+        }
+      ],
+      "id": "0fdfa82e-08bd-480f-b780-23495e0b6b03"
+    }
+  ]
+}

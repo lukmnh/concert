@@ -1,0 +1,202 @@
+{
+  "info": {
+    "_postman_id": "fff328e8-9fb7-44ae-b2aa-1643dbd09ca2",
+    "name": "slik",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "http://10.22.15.203/cbasws/getdatadashboard",
+      "id": "3fa25483-82c0-4624-96db-ba045d3e9b70",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n\"kodeCabang\": \"0212\",\r\n\"idUserCabang\": \"18010700\",\r\n\"jenisProduct\": \"003\",\r\n\"tujuanSlikChecking\": \"1\",\r\n\"namaNasabah\": \"TRISKA GUMALASARI\",\r\n\"tglLahir\": \"22-04-1983\",\r\n\"tempatLahir\": \"PURWAKARTA\",\r\n\"noKtp\": \"1306026710830001\",\r\n\"jenisKelamin\": \"F\",\r\n\"noAplikasi\": \"2212000134\",\r\n\"revDataDebitur\":\"0\",\r\n\"revDataPasangan\":\"0\",\r\n\"screeningStep\":\"1\",\r\n\"refreshData\":\"0\",\r\n\"dataPasangan\": {},\r\n\"dataPenjamin\": []\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://10.22.17.81/cbasws/slikrequestindividuscreening",
+          "protocol": "http",
+          "host": [
+            "10",
+            "22",
+            "17",
+            "81"
+          ],
+          "path": [
+            "cbasws",
+            "slikrequestindividuscreening"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://10.22.17.81/cbasws/getangsuran",
+      "id": "c4549bbd-d221-4bb1-b4c5-8ccc22b2a158",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"requestId\": \"032883101I\",\r\n    \"noAplikasi\": \"2401032883\",\r\n    \"type\": \"byreqid\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://10.22.17.81/cbasws/getangsuran",
+          "protocol": "http",
+          "host": [
+            "10",
+            "22",
+            "17",
+            "81"
+          ],
+          "path": [
+            "cbasws",
+            "getangsuran"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://10.22.17.81/cbasws/slikresult",
+      "id": "4a2d899f-36d7-4076-8f76-cc6709ae3f8a",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"requestId\": \"020375068I\",\r\n    \"type\": \"aplikasi\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://10.22.17.81/cbasws/slikresult",
+          "protocol": "http",
+          "host": [
+            "10",
+            "22",
+            "17",
+            "81"
+          ],
+          "path": [
+            "cbasws",
+            "slikresult"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://10.22.17.81/cbasws/getdatadashboard",
+      "id": "a6cb0b2c-6ef6-4281-9f9b-c34ce1b86d3e",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"requestId\": \"081321224I\",\r\n    \"type\": \"aplikasi\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://10.22.17.81/cbasws/getdatadashboard",
+          "protocol": "http",
+          "host": [
+            "10",
+            "22",
+            "17",
+            "81"
+          ],
+          "path": [
+            "cbasws",
+            "getdatadashboard"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://10.22.17.81/cbasws/getcategory",
+      "id": "f0444045-f255-4054-b6fa-4288548f58a3",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "\t// {\r\n    // \"appId\": \"013949043I101\",\r\n    // \"requestId\": \"059105173I\",\r\n    // \"noAplikasi\": \"2409059105\",\r\n    // \"type\": \"category\"\r\n    // }\r\n\r\n{\r\n    \"requestId\": \"009890048I\",\r\n    \"noAplikasi\": \"2503009890\",\r\n    \"type\": \"agregat_ind\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://10.22.17.81/cbasws/getcategory",
+          "protocol": "http",
+          "host": [
+            "10",
+            "22",
+            "17",
+            "81"
+          ],
+          "path": [
+            "cbasws",
+            "getcategory"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://get-appid-nasabah-slik-cr-java-dev.apps.ocp4dev.muf.co.id/getAppIdSlik",
+      "id": "3e6d500f-62d5-4aed-9182-d4d6b1a491ed",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"id_card_no\":\"3201035005800005\",\r\n    \"application_no\":\"2410101705\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://get-appid-nasabah-slik-cr-java-dev.apps.ocp4dev.muf.co.id/getAppIdSlik",
+          "protocol": "http",
+          "host": [
+            "get-appid-nasabah-slik-cr-java-dev",
+            "apps",
+            "ocp4dev",
+            "muf",
+            "co",
+            "id"
+          ],
+          "path": [
+            "getAppIdSlik"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}

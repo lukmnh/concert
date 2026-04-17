@@ -1,0 +1,130 @@
+{
+  "info": {
+    "_postman_id": "6d076a8d-7ccc-4084-8f2e-2772a5b8ea92",
+    "name": "travelexpense",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "localhost:8080/api/login",
+      "id": "10f74076-5e4d-444b-8a5f-0dd05664b3ca",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"name\": \"John Doe\",\r\n  \"email\": \"johndoe@example.com\",\r\n  \"password\": \"password123\",\r\n  \"bod\": \"1990-01-01\",\r\n  \"address\": \"123 Main St\",\r\n  \"departmentId\": 1\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:9090/api/v1/users/",
+          "host": [
+            "localhost"
+          ],
+          "port": "9090",
+          "path": [
+            "api",
+            "v1",
+            "users",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "localhost:8080/api/requestTravel",
+      "id": "b1fc7626-e916-4d6c-b2b3-81683462adf2",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"start_location_at\": \"New York\",\r\n    \"location_ended_at\": \"San Francisco\",\r\n    \"start_journey_date\": \"01-06-2024 08:00:00\",\r\n    \"end_journey_date\": \"10-06-2024 17:00:00\",\r\n    \"description\": \"Business trip to San Francisco\",\r\n    \"email\": \"lia@freelance.co.id\"\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:8080/api/requestTravel",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "requestTravel"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "localhost:8080/api/registration",
+      "id": "887539e2-1b2d-462d-8232-27e5bd3f217e",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"fullname\": \"lia\",\r\n    \"email\": \"lia@freelance.co.id\",\r\n    \"bod\": \"2007-08-24\",\r\n    \"address\": \"Jakarta, Indonesia\",\r\n    \"managerId\": 11,\r\n    \"password\": \"yourpassword\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:8080/api/registration",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "registration"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "localhost:8080/api/findHistoryTravel",
+      "id": "e0d58eb5-35f3-4056-a8d5-33bc405e0234",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"email\":\"lia@freelance.co.id\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:8080/api/findHistoryTravel",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "findHistoryTravel"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}

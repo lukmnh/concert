@@ -1,0 +1,124 @@
+{
+  "info": {
+    "_postman_id": "2b9723fd-b452-495e-af77-929b8b5d8659",
+    "name": "Token",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "http://mff-gateway-acq-dev.apps.ocp4dev.muf.co.id/uaa-iam/user/auth/login",
+      "id": "c2f9b0f9-c07e-4446-8465-0e0fc371d674",
+      "request": {
+        "auth": {
+          "type": "bearer"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"username\" : \"20014236\",\r\n    \"password\" : \"asd\",\r\n    \"app\": \"SKTN\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://mff-gateway-acq-uat.apps.ocp4dev.muf.co.id/uaa-iam/user/auth/login",
+          "protocol": "http",
+          "host": [
+            "mff-gateway-acq-uat",
+            "apps",
+            "ocp4dev",
+            "muf",
+            "co",
+            "id"
+          ],
+          "path": [
+            "uaa-iam",
+            "user",
+            "auth",
+            "login"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://sso-muf-nodejs-dev.apps.ocp4dev.muf.co.id/api/authSystem/loginAuth",
+      "id": "2c4ff968-69e2-453f-89d5-ec95d6e0f879",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n\"username\" : \"19012378\",\r\n\"password\" : \"Muf_2017\",\r\n\"app_name\" : \"SKTN\",\r\n\"app_from\" : \"Skeleton MUF\",\r\n\"login_ip\" : \"192.1.1.1\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://sso-muf-nodejs-uat.apps.ocp4dev.muf.co.id/api/authSystem/loginAuth",
+          "protocol": "http",
+          "host": [
+            "sso-muf-nodejs-uat",
+            "apps",
+            "ocp4dev",
+            "muf",
+            "co",
+            "id"
+          ],
+          "path": [
+            "api",
+            "authSystem",
+            "loginAuth"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://mff-gateway-acq.apps.ocpdc.muf.co.id/uaa-iam/user/details",
+      "id": "a12ad898-6eb3-45ac-a719-cdceb294dc62",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://mff-gateway-acq.apps.ocpdc.muf.co.id/uaa-iam/user/details",
+          "protocol": "http",
+          "host": [
+            "mff-gateway-acq",
+            "apps",
+            "ocpdc",
+            "muf",
+            "co",
+            "id"
+          ],
+          "path": [
+            "uaa-iam",
+            "user",
+            "details"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}

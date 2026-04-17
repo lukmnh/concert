@@ -2,12 +2,13 @@
   "info": {
     "_postman_id": "97ba1421-0b02-4807-bf52-1857d4e3e19e",
     "name": "Concert Ticket",
-    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    "description": "Postman collection based on actual controller implementation",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "25429751"
   },
   "item": [
     {
       "name": "Create Concert",
-      "id": "0ba94c1b-454c-43f2-8e8a-3ac41914d382",
       "request": {
         "method": "POST",
         "header": [
@@ -18,7 +19,7 @@
         ],
         "body": {
           "mode": "raw",
-          "raw": "{\n  \"name\": \"Coldplay\",\n  \"venue\": \"GBK Stadium\",\n  \"description\": \"Coldplay World Tour\",\n  \"ticketSlots\": [\n    {\n      \"saleStart\": \"2026-04-12T20:36:14\",\n      \"saleEnd\": \"2026-04-12T20:56:14\",\n      \"totalTickets\": 10000\n    }\n  ]\n}"
+          "raw": "{\n  \"name\": \"Coldplay\",\n  \"venue\": \"GBK Stadium\",\n  \"description\": \"Coldplay World Tour\",\n  \"ticketSlots\": [\n    {\n      \"saleStart\": \"2026-04-12T20:36:14\",\n      \"saleEnd\": \"2026-04-12T20:56:14\",\n      \"totalTickets\": 2\n    }\n  ]\n}"
         },
         "url": {
           "raw": "{{base_url}}/concert",
@@ -34,10 +35,21 @@
     },
     {
       "name": "Get Concert by ID",
-      "id": "79ce3275-5f67-431a-a7d3-fcabea9ad0f7",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
       "request": {
         "method": "GET",
         "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
         "url": {
           "raw": "{{base_url}}/concert/1",
           "host": [
@@ -53,10 +65,21 @@
     },
     {
       "name": "Search Concert",
-      "id": "e04e2258-7f6c-4cdd-9471-a74cc6e4d8d1",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
       "request": {
         "method": "GET",
         "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
         "url": {
           "raw": "{{base_url}}/concert?name=Coldplay&venue=GBK",
           "host": [
@@ -68,13 +91,11 @@
           "query": [
             {
               "key": "name",
-              "value": "Coldplay",
-              "uuid": "0b6e3a1e-9357-424a-8136-cfe792503a9c"
+              "value": "Coldplay"
             },
             {
               "key": "venue",
-              "value": "GBK",
-              "uuid": "db8d919b-69cc-493a-a6b5-87e8284f067e"
+              "value": "GBK"
             }
           ]
         }
@@ -83,7 +104,6 @@
     },
     {
       "name": "Book Ticket",
-      "id": "984f9494-b9e9-4ee8-a1b1-3e0d23265464",
       "request": {
         "method": "POST",
         "header": [
@@ -94,7 +114,7 @@
         ],
         "body": {
           "mode": "raw",
-          "raw": "{\n  \"slotId\": 2,\n  \"userId\": 1,\n  \"quantity\": 8\n}"
+          "raw": "{\n  \"slotId\": 1,\n  \"userId\": 1,\n  \"quantity\": 2\n}\n\n/*\noverbook\n{\n  \"slotId\": 1,\n  \"userId\": 2,\n  \"quantity\": 20000\n}\n*/\n\n/*\nduplicate\n{\n  \"slotId\": 1,\n  \"userId\": 1,\n  \"quantity\": 1\n}\n*/"
         },
         "url": {
           "raw": "{{base_url}}/booking",
@@ -110,19 +130,9 @@
     },
     {
       "name": "Get Bookings by User",
-      "id": "013cfc09-c96c-450d-a458-70563c72cb81",
       "request": {
         "method": "GET",
         "header": [],
-        "body": {
-          "mode": "raw",
-          "raw": "",
-          "options": {
-            "raw": {
-              "language": "json"
-            }
-          }
-        },
         "url": {
           "raw": "{{base_url}}/booking/user/1",
           "host": [
@@ -140,7 +150,6 @@
   ],
   "variable": [
     {
-      "id": "d6db6a15-63eb-4480-be7a-1dbaf87926dc",
       "key": "base_url",
       "value": "http://localhost:9090/v1/api"
     }
