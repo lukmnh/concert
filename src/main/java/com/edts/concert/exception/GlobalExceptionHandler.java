@@ -13,46 +13,36 @@ import java.util.stream.Collectors;
 @RestControllerAdvice
 public class GlobalExceptionHandler {
 
-    @ExceptionHandler(ResourceNotFoundException.class)
-    public ResponseEntity<ErrorResponse> handleNotFound(ResourceNotFoundException ex) {
-        return ResponseEntity
-                .status(HttpStatus.NOT_FOUND)
-                .body(new ErrorResponse(ex.getMessage()));
-    }
-
-    @ExceptionHandler(BookingNotAllowedException.class)
-    public ResponseEntity<ErrorResponse> handleBookingNotAllowed(BookingNotAllowedException ex) {
-        return ResponseEntity
-                .status(HttpStatus.UNPROCESSABLE_ENTITY)
-                .body(new ErrorResponse(ex.getMessage()));
-    }
-
-    @ExceptionHandler(DuplicateBookingException.class)
-    public ResponseEntity<ErrorResponse> handleDuplicate(DuplicateBookingException ex) {
-        return ResponseEntity
-                .status(HttpStatus.CONFLICT)
-                .body(new ErrorResponse(ex.getMessage()));
-    }
-
-    @ExceptionHandler(SoldOutException.class)
-    public ResponseEntity<ErrorResponse> handleSoldOut(SoldOutException ex) {
-        return ResponseEntity
-                .status(HttpStatus.CONFLICT)
-                .body(new ErrorResponse(ex.getMessage()));
+    @ExceptionHandler(BusinessException.class)
+    public ResponseEntity<ErrorResponse> handleBusinessException(BusinessException ex) {
+        ErrorCode errorCode = ex.getErrorCode();
+        ErrorResponse response = ex.getDetail() != null
+                ? ErrorResponse.of(errorCode, ex.getDetail())
+                : ErrorResponse.of(errorCode);
+        return ResponseEntity.status(errorCode.getHttpStatus()).body(response);
     }
 
     @ExceptionHandler(ObjectOptimisticLockingFailureException.class)
     public ResponseEntity<ErrorResponse> handleOptimisticLock(ObjectOptimisticLockingFailureException ex) {
         return ResponseEntity
                 .status(HttpStatus.CONFLICT)
-                .body(new ErrorResponse("Please try again after some time."));
+                .body(ErrorResponse.of(ErrorCode.OPTIMISTIC_LOCK_CONFLICT));
     }
 
     @ExceptionHandler(DataIntegrityViolationException.class)
     public ResponseEntity<ErrorResponse> handleDataIntegrity(DataIntegrityViolationException ex) {
+        String message = ex.getMostSpecificCause().getMessage().toLowerCase();
+
+        ErrorCode errorCode;
+        if (message.contains("uq_users_email")) {
+            errorCode = ErrorCode.DUPLICATE_EMAIL;
+        } else {
+            errorCode = ErrorCode.DUPLICATE_BOOKING;
+        }
+
         return ResponseEntity
-                .status(HttpStatus.CONFLICT)
-                .body(new ErrorResponse("You already have a booking for this slot"));
+                .status(errorCode.getHttpStatus())
+                .body(ErrorResponse.of(errorCode));
     }
 
     @ExceptionHandler(MethodArgumentNotValidException.class)
@@ -63,6 +53,6 @@ public class GlobalExceptionHandler {
                 .collect(Collectors.joining(", "));
         return ResponseEntity
                 .status(HttpStatus.BAD_REQUEST)
-                .body(new ErrorResponse(message));
+                .body(ErrorResponse.validation(message));
     }
 }

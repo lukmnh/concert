@@ -1,6 +1,7 @@
 package com.edts.concert.entity;
 
-import com.edts.concert.exception.SoldOutException;
+import com.edts.concert.exception.BusinessException;
+import com.edts.concert.exception.ErrorCode;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -35,17 +36,4 @@ public class TicketSlot {
     private int remainingTickets;
     @Version
     private Long version;
-
-
-    public boolean isBookingWindowOpen() {
-        LocalDateTime now = LocalDateTime.now();
-        return now.isAfter(saleStart) && now.isBefore(saleEnd);
-    }
-
-    public void decreaseRemainingTickets(int quantity) {
-        if (this.remainingTickets < quantity) {
-            throw new SoldOutException("Not enough tickets. Remaining: " + this.remainingTickets);
-        }
-        this.remainingTickets -= quantity;
-    }
 }

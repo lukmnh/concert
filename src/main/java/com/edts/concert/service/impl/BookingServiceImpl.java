@@ -6,9 +6,8 @@ import com.edts.concert.entity.Booking;
 import com.edts.concert.entity.Concert;
 import com.edts.concert.entity.TicketSlot;
 import com.edts.concert.entity.User;
-import com.edts.concert.exception.BookingNotAllowedException;
-import com.edts.concert.exception.DuplicateBookingException;
-import com.edts.concert.exception.ResourceNotFoundException;
+import com.edts.concert.exception.BusinessException;
+import com.edts.concert.exception.ErrorCode;
 import com.edts.concert.repository.BookingRepository;
 import com.edts.concert.repository.TicketSlotRepository;
 import com.edts.concert.repository.UserRepository;
@@ -37,8 +36,9 @@ public class BookingServiceImpl implements BookingService {
 
         validateBookingWindow(slot);
         validateNoDuplicateBooking(slot, user);
+        validateTicketAvailability(slot, request.getQuantity());
 
-        slot.decreaseRemainingTickets(request.getQuantity());
+        slot.setRemainingTickets(slot.getRemainingTickets() - request.getQuantity());
         slotRepository.save(slot);
 
         Booking booking = Booking.builder()
@@ -57,7 +57,7 @@ public class BookingServiceImpl implements BookingService {
     @Transactional(readOnly = true)
     public List<BookingResponse> getBookingsByUser(Long userId) {
         if (!userRepository.existsById(userId)) {
-            throw new ResourceNotFoundException("User not found with id: " + userId);
+            throw new BusinessException(ErrorCode.USER_NOT_FOUND, "id: " + userId);
         }
 
         return bookingRepository.findByUserId(userId)
@@ -68,26 +68,36 @@ public class BookingServiceImpl implements BookingService {
 
     private User findUserOrThrow(Long userId) {
         return userRepository.findById(userId)
-                .orElseThrow(() -> new ResourceNotFoundException("User not found with id: " + userId));
+                .orElseThrow(() -> new BusinessException(ErrorCode.USER_NOT_FOUND, "id: " + userId));
     }
 
     private TicketSlot findSlotOrThrow(Long slotId) {
         return slotRepository.findById(slotId)
-                .orElseThrow(() -> new ResourceNotFoundException("Ticket slot not found with id: " + slotId));
+                .orElseThrow(() -> new BusinessException(ErrorCode.TICKET_SLOT_NOT_FOUND, "id: " + slotId));
     }
 
     private void validateBookingWindow(TicketSlot slot) {
-        if (!slot.isBookingWindowOpen()) {
-            throw new BookingNotAllowedException(
-                    "Booking window is not open. Sale period: "
-                            + slot.getSaleStart() + " to " + slot.getSaleEnd()
+        LocalDateTime now = LocalDateTime.now();
+        if (now.isBefore(slot.getSaleStart()) || now.isAfter(slot.getSaleEnd())) {
+            throw new BusinessException(
+                    ErrorCode.BOOKING_WINDOW_CLOSED,
+                    "Sale period: " + slot.getSaleStart() + " to " + slot.getSaleEnd()
             );
         }
     }
 
     private void validateNoDuplicateBooking(TicketSlot slot, User user) {
         if (bookingRepository.existsBySlotIdAndUserId(slot.getId(), user.getId())) {
-            throw new DuplicateBookingException("You already have a booking for this slot");
+            throw new BusinessException(ErrorCode.DUPLICATE_BOOKING);
+        }
+    }
+
+    private void validateTicketAvailability(TicketSlot slot, int quantity) {
+        if (slot.getRemainingTickets() < quantity) {
+            throw new BusinessException(
+                    ErrorCode.INSUFFICIENT_TICKETS,
+                    "Requested: " + quantity + ", remaining: " + slot.getRemainingTickets()
+            );
         }
     }
 

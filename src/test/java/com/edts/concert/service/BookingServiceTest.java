@@ -6,10 +6,8 @@ import com.edts.concert.entity.Booking;
 import com.edts.concert.entity.Concert;
 import com.edts.concert.entity.TicketSlot;
 import com.edts.concert.entity.User;
-import com.edts.concert.exception.BookingNotAllowedException;
-import com.edts.concert.exception.DuplicateBookingException;
-import com.edts.concert.exception.ResourceNotFoundException;
-import com.edts.concert.exception.SoldOutException;
+import com.edts.concert.exception.BusinessException;
+import com.edts.concert.exception.ErrorCode;
 import com.edts.concert.repository.BookingRepository;
 import com.edts.concert.repository.TicketSlotRepository;
 import com.edts.concert.repository.UserRepository;
@@ -43,7 +41,7 @@ class BookingServiceTest {
 
     @Test
     void bookTicket_shouldSucceed_whenWindowIsOpenAndTicketsAvailable() {
-        User user    = buildUser(1L);
+        User user          = buildUser(1L);
         TicketSlot slot    = buildOpenSlot(1L, 100);
         BookingRequest req = buildRequest(1L, 1L, 1);
 
@@ -66,31 +64,35 @@ class BookingServiceTest {
 
     @Test
     void bookTicket_shouldThrow_whenBookingWindowHasNotStarted() {
-        User user = buildUser(1L);
+        User user      = buildUser(1L);
         TicketSlot slot = buildFutureSlot(1L);
 
         when(userRepository.findById(1L)).thenReturn(Optional.of(user));
         when(slotRepository.findById(1L)).thenReturn(Optional.of(slot));
 
         assertThatThrownBy(() -> bookingService.bookTicket(buildRequest(1L, 1L, 1)))
-                .isInstanceOf(BookingNotAllowedException.class);
+                .isInstanceOf(BusinessException.class)
+                .satisfies(ex -> assertThat(((BusinessException) ex).getErrorCode())
+                        .isEqualTo(ErrorCode.BOOKING_WINDOW_CLOSED));
     }
 
     @Test
     void bookTicket_shouldThrow_whenBookingWindowHasClosed() {
-        User user = buildUser(1L);
+        User user       = buildUser(1L);
         TicketSlot slot = buildClosedSlot(1L);
 
         when(userRepository.findById(1L)).thenReturn(Optional.of(user));
         when(slotRepository.findById(1L)).thenReturn(Optional.of(slot));
 
         assertThatThrownBy(() -> bookingService.bookTicket(buildRequest(1L, 1L, 1)))
-                .isInstanceOf(BookingNotAllowedException.class);
+                .isInstanceOf(BusinessException.class)
+                .satisfies(ex -> assertThat(((BusinessException) ex).getErrorCode())
+                        .isEqualTo(ErrorCode.BOOKING_WINDOW_CLOSED));
     }
 
     @Test
     void bookTicket_shouldThrow_whenUserAlreadyBookedThisSlot() {
-        User user = buildUser(1L);
+        User user       = buildUser(1L);
         TicketSlot slot = buildOpenSlot(1L, 100);
 
         when(userRepository.findById(1L)).thenReturn(Optional.of(user));
@@ -98,13 +100,14 @@ class BookingServiceTest {
         when(bookingRepository.existsBySlotIdAndUserId(1L, 1L)).thenReturn(true);
 
         assertThatThrownBy(() -> bookingService.bookTicket(buildRequest(1L, 1L, 1)))
-                .isInstanceOf(DuplicateBookingException.class);
+                .isInstanceOf(BusinessException.class)
+                .satisfies(ex -> assertThat(((BusinessException) ex).getErrorCode())
+                        .isEqualTo(ErrorCode.DUPLICATE_BOOKING));
     }
-
 
     @Test
     void bookTicket_shouldThrow_whenNoTicketsRemaining() {
-        User user = buildUser(1L);
+        User user       = buildUser(1L);
         TicketSlot slot = buildOpenSlot(1L, 0);
 
         when(userRepository.findById(1L)).thenReturn(Optional.of(user));
@@ -112,12 +115,14 @@ class BookingServiceTest {
         when(bookingRepository.existsBySlotIdAndUserId(1L, 1L)).thenReturn(false);
 
         assertThatThrownBy(() -> bookingService.bookTicket(buildRequest(1L, 1L, 1)))
-                .isInstanceOf(SoldOutException.class);
+                .isInstanceOf(BusinessException.class)
+                .satisfies(ex -> assertThat(((BusinessException) ex).getErrorCode())
+                        .isEqualTo(ErrorCode.INSUFFICIENT_TICKETS));
     }
 
     @Test
     void bookTicket_shouldThrow_whenRequestedQuantityExceedsRemaining() {
-        User user = buildUser(1L);
+        User user       = buildUser(1L);
         TicketSlot slot = buildOpenSlot(1L, 2);
 
         when(userRepository.findById(1L)).thenReturn(Optional.of(user));
@@ -125,7 +130,9 @@ class BookingServiceTest {
         when(bookingRepository.existsBySlotIdAndUserId(1L, 1L)).thenReturn(false);
 
         assertThatThrownBy(() -> bookingService.bookTicket(buildRequest(1L, 1L, 5)))
-                .isInstanceOf(SoldOutException.class);
+                .isInstanceOf(BusinessException.class)
+                .satisfies(ex -> assertThat(((BusinessException) ex).getErrorCode())
+                        .isEqualTo(ErrorCode.INSUFFICIENT_TICKETS));
     }
 
     @Test
@@ -133,8 +140,9 @@ class BookingServiceTest {
         when(userRepository.findById(99L)).thenReturn(Optional.empty());
 
         assertThatThrownBy(() -> bookingService.bookTicket(buildRequest(99L, 1L, 1)))
-                .isInstanceOf(ResourceNotFoundException.class)
-                .hasMessageContaining("User");
+                .isInstanceOf(BusinessException.class)
+                .satisfies(ex -> assertThat(((BusinessException) ex).getErrorCode())
+                        .isEqualTo(ErrorCode.USER_NOT_FOUND));
     }
 
     @Test
@@ -144,8 +152,9 @@ class BookingServiceTest {
         when(slotRepository.findById(99L)).thenReturn(Optional.empty());
 
         assertThatThrownBy(() -> bookingService.bookTicket(buildRequest(1L, 99L, 1)))
-                .isInstanceOf(ResourceNotFoundException.class)
-                .hasMessageContaining("slot");
+                .isInstanceOf(BusinessException.class)
+                .satisfies(ex -> assertThat(((BusinessException) ex).getErrorCode())
+                        .isEqualTo(ErrorCode.TICKET_SLOT_NOT_FOUND));
     }
 
     private User buildUser(Long id) {

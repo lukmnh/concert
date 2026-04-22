@@ -6,7 +6,8 @@ import com.edts.concert.dto.response.ConcertResponse;
 import com.edts.concert.dto.response.TicketSlotResponse;
 import com.edts.concert.entity.Concert;
 import com.edts.concert.entity.TicketSlot;
-import com.edts.concert.exception.ResourceNotFoundException;
+import com.edts.concert.exception.BusinessException;
+import com.edts.concert.exception.ErrorCode;
 import com.edts.concert.repository.ConcertRepository;
 import com.edts.concert.service.ConcertService;
 import lombok.RequiredArgsConstructor;
@@ -34,7 +35,7 @@ public class ConcertServiceImpl implements ConcertService {
     @Transactional(readOnly = true)
     public ConcertResponse getConcertById(Long id) {
         Concert concert = concertRepository.findById(id)
-                .orElseThrow(() -> new ResourceNotFoundException("Concert not found with id: " + id));
+                .orElseThrow(() -> new BusinessException(ErrorCode.CONCERT_NOT_FOUND, "id: " + id));
         return setTheResponse(concert);
     }
 
@@ -64,6 +65,12 @@ public class ConcertServiceImpl implements ConcertService {
     }
 
     private TicketSlot buildTicketSlotFromRequest(TicketSlotRequest request, Concert concert) {
+        if (!request.getSaleEnd().isAfter(request.getSaleStart())) {
+            throw new BusinessException(
+                    ErrorCode.INVALID_SLOT_DATE_RANGE,
+                    "saleStart: " + request.getSaleStart() + ", saleEnd: " + request.getSaleEnd()
+            );
+        }
         TicketSlot slot = new TicketSlot();
         slot.setConcert(concert);
         slot.setSaleStart(request.getSaleStart());
